@@ -3,27 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OdontolarPlus — Planos odontológicos com saúde integral</title>
-    <meta name="description" content="Planos odontológicos com acesso exclusivo ao AquariOS, seu assistente pessoal de saúde. Cuidado completo em um único ecossistema.">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="OdontolarPlus — Planos odontológicos com saúde integral">
-    <meta property="og:description" content="Planos odontológicos com acesso exclusivo ao AquariOS, seu assistente pessoal de saúde.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://odontolarplus.com.br">
+
+    <!-- SEO PRIMARY -->
+    <title>Odontolar Plus — Clínica Odontológica Premium em Belo Horizonte | Jardim América</title>
+    <meta name="description" content="Odontolar Plus, clínica dental modelo premium dos Drs. Fabiano e Gustavo Leite. 36 anos de experiência em alinhadores, implantes, próteses e estética dental. Tratamento parcelado em Pix e cartão. Convênios Odontoprev, Sulamerica, Bradesco. Jardim América, Belo Horizonte - MG.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://odontolarplus.com.br">
+
+    <!-- VERIFICAÇÕES -->
+    <meta name="google-site-verification" content="zwivAwWAmvPknjEiWYdrv5-xPCH0diCOharRNzwISDA">
+    <meta name="msvalidate.01" content="0A59739601DF5BBA5D5650B2E99CF385">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Odontolar Plus — Clínica Odontológica Premium em Belo Horizonte">
+    <meta property="og:description" content="Gestão preventiva da saúde bucal com alinhadores, implantes, próteses e estética dental. 36 anos de experiência. Tratamento parcelado em Pix e cartão.">
+    <meta property="og:image" content="https://static.wixstatic.com/media/b5636d_7f10dd43d7c94b4e99617a03a9592ba1~mv2.png/v1/fit/w_1200,h_630,al_c/b5636d_7f10dd43d7c94b4e99617a03a9592ba1~mv2.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://odontolarplus.com.br">
+    <meta property="og:site_name" content="Odontolar Plus">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="fb:admins" content="odontolarclinica">
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Odontolar Plus — Clínica Odontológica Premium em Belo Horizonte">
+    <meta name="twitter:description" content="36 anos cuidando de sorrisos. Alinhadores, implantes, estética dental. Jardim América, BH.">
+    <meta name="twitter:image" content="https://static.wixstatic.com/media/b5636d_7f10dd43d7c94b4e99617a03a9592ba1~mv2.png/v1/fit/w_1200,h_630,al_c/b5636d_7f10dd43d7c94b4e99617a03a9592ba1~mv2.png">
+
+    <!-- SCHEMA.ORG -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Odontolar Plus",
+      "description": "Clínica odontológica modelo premium com gestão preventiva da saúde bucal. Alinhadores, implantes, próteses e estética dental.",
+      "url": "https://odontolarplus.com.br",
+      "logo": "https://static.wixstatic.com/media/b5636d_7f10dd43d7c94b4e99617a03a9592ba1~mv2.png",
+      "image": "https://static.wixstatic.com/media/b5636d_7f10dd43d7c94b4e99617a03a9592ba1~mv2.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Jardim América, 1916",
+        "addressLocality": "Belo Horizonte",
+        "addressRegion": "MG",
+        "addressCountry": "BR"
+      },
+      "areaServed": ["Jardim América","Barão Homem de Melo","Estoril","Buritis","Belvedere","Nova Suíça","Gutierrez","Cidade Jardim","São Bento","Anchieta","Luxemburgo"],
+      "medicalSpecialty": "Dentistry",
+      "priceRange": "$$",
+      "paymentAccepted": "Pix, Cartão de Crédito, Cartão de Débito, Convênios",
+      "founder": [
+        {"@type": "Person", "name": "Dr. Fabiano Leite"},
+        {"@type": "Person", "name": "Dr. Gustavo Leite"}
+      ]
+    }
+    </script>
 
     <style>
         :root {
             --bg: #F8F6F2;
-            --hero: #0F1923;
+            --hero: #0A1628;
+            --hero2: #0F2040;
             --card: #FFFFFF;
-            --primary: #0077CC;
+            --primary: #0A6EBD;
             --primary-light: #3399EE;
+            --primary-dark: #084F8A;
             --accent: #7C5CBF;
-            --text: #0F1923;
-            --text-muted: #64748B;
-            --border: rgba(15,25,35,0.09);
-            --success: #16A34A;
+            --accent-light: #9B7FD4;
+            --text: #0A1628;
+            --text-muted: #5A6778;
+            --border: rgba(10,22,40,0.09);
+            --green: #16A34A;
+            --section-alt: #EFF6FF;
         }
 
         *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -32,289 +84,341 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.65;
             -webkit-font-smoothing: antialiased;
         }
 
         /* NAV */
         nav {
             position: fixed; top:0; left:0; right:0; z-index:100;
-            padding: 1.1rem 2.5rem;
+            padding: 0.9rem 2.5rem;
             display: flex; align-items:center; justify-content:space-between;
             backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            background: rgba(15,25,35,0.92);
+            background: rgba(10,22,40,0.94);
             border-bottom: 1px solid rgba(255,255,255,0.06);
         }
-        .nav-logo { font-size:1.05rem; font-weight:800; color:#fff; letter-spacing:-0.02em; display:flex; align-items:center; gap:0.5rem; }
-        .nav-logo-dot { width:8px; height:8px; border-radius:50%; background:var(--primary-light); }
-        .nav-links { display:flex; gap:2rem; list-style:none; }
-        .nav-links a { color:rgba(255,255,255,0.5); text-decoration:none; font-size:0.85rem; font-weight:500; transition:color 0.2s; }
+        .nav-logo { display:flex; align-items:center; gap:0.625rem; }
+        .nav-logo-icon { width:32px; height:32px; border-radius:8px; background:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1rem; }
+        .nav-logo-text { font-size:1rem; font-weight:800; color:#fff; letter-spacing:-0.02em; }
+        .nav-links { display:flex; gap:1.75rem; list-style:none; }
+        .nav-links a { color:rgba(255,255,255,0.5); text-decoration:none; font-size:0.825rem; font-weight:500; transition:color 0.2s; }
         .nav-links a:hover { color:#fff; }
         .nav-actions { display:flex; gap:0.75rem; align-items:center; }
-        .nav-cta {
+        .nav-btn {
             background: var(--primary); color:#fff;
             font-size:0.8rem; font-weight:700;
             padding:0.5rem 1.1rem; border-radius:8px;
             text-decoration:none; transition:opacity 0.2s;
+            white-space:nowrap;
         }
-        .nav-cta:hover { opacity:0.85; }
-        .nav-download {
-            background: rgba(255,255,255,0.08); color:rgba(255,255,255,0.6);
-            font-size:0.8rem; font-weight:600;
-            padding:0.5rem 1rem; border-radius:8px;
-            text-decoration:none; border:1px solid rgba(255,255,255,0.12);
-            transition:all 0.2s;
+        .nav-btn:hover { opacity:0.88; }
+        .nav-aquarios {
+            background: rgba(124,92,191,0.2); color:var(--accent-light);
+            border:1px solid rgba(124,92,191,0.3);
+            font-size:0.75rem; font-weight:700;
+            padding:0.45rem 0.9rem; border-radius:8px;
+            text-decoration:none; transition:all 0.2s;
         }
-        .nav-download:hover { background:rgba(255,255,255,0.14); color:#fff; }
+        .nav-aquarios:hover { background:rgba(124,92,191,0.35); color:#fff; }
 
         /* HERO */
         .hero {
-            background: var(--hero); min-height:100vh;
+            background: linear-gradient(155deg, var(--hero) 0%, var(--hero2) 60%, #0A2040 100%);
+            min-height: 100vh;
             display:flex; flex-direction:column; align-items:center; justify-content:center;
-            text-align:center; padding:8rem 2rem 6rem; position:relative; overflow:hidden;
+            text-align:center; padding:7rem 2rem 5rem; position:relative; overflow:hidden;
         }
         .hero::before {
-            content:''; position:absolute;
-            width:600px; height:600px;
-            background: radial-gradient(circle, rgba(0,119,204,0.1) 0%, transparent 70%);
-            top:50%; left:50%; transform:translate(-50%,-50%);
+            content:''; position:absolute; inset:0;
+            background: radial-gradient(ellipse 70% 50% at 50% 60%, rgba(10,110,189,0.18) 0%, transparent 70%);
+            pointer-events:none;
         }
         .hero-badge {
             display:inline-flex; align-items:center; gap:0.5rem;
-            background: rgba(0,119,204,0.18); border:1px solid rgba(0,119,204,0.35);
+            background: rgba(10,110,189,0.2); border:1px solid rgba(10,110,189,0.4);
             color: var(--primary-light);
             font-size:0.68rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
             padding:0.4rem 1rem; border-radius:100px; margin-bottom:2rem; position:relative;
         }
         .badge-dot { width:6px; height:6px; border-radius:50%; background:var(--primary-light); animation:pulse 2s infinite; }
-        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
+
+        /* H1 - único na página */
         .hero h1 {
-            font-size: clamp(2rem, 5vw, 3.75rem);
+            font-size: clamp(2rem, 5.5vw, 3.75rem);
             font-weight:800; color:#fff; letter-spacing:-0.03em; line-height:1.1;
-            margin-bottom:1.25rem; max-width:780px; position:relative;
+            margin-bottom:1.25rem; max-width:800px; position:relative;
         }
         .hero h1 em { font-style:normal; color:var(--primary-light); }
-        .hero h1 span { color:rgba(255,255,255,0.55); }
         .hero-sub {
-            font-size: clamp(0.9rem, 1.6vw, 1.1rem);
-            color:rgba(255,255,255,0.45); max-width:520px;
-            margin-bottom:2.5rem; line-height:1.75; position:relative;
+            font-size: clamp(0.925rem, 1.6vw, 1.1rem);
+            color:rgba(255,255,255,0.5); max-width:580px;
+            margin-bottom:2.5rem; line-height:1.8; position:relative;
         }
         .hero-btns { display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; position:relative; }
-        .btn-primary {
+        .btn-hero-primary {
             display:inline-flex; align-items:center; gap:0.625rem;
-            background: var(--primary); color:#fff; font-size:0.95rem; font-weight:700;
-            padding:0.875rem 1.75rem; border-radius:12px; text-decoration:none; transition:opacity 0.2s;
+            background: var(--primary); color:#fff; font-size:0.975rem; font-weight:700;
+            padding:0.9rem 1.75rem; border-radius:12px; text-decoration:none; transition:opacity 0.2s;
         }
-        .btn-primary:hover { opacity:0.9; }
-        .btn-download {
+        .btn-hero-primary:hover { opacity:0.9; }
+        .btn-hero-secondary {
             display:inline-flex; align-items:center; gap:0.625rem;
-            background: rgba(255,255,255,0.07); color:rgba(255,255,255,0.7); font-size:0.9rem; font-weight:600;
-            padding:0.875rem 1.5rem; border-radius:12px; text-decoration:none;
-            border:1px solid rgba(255,255,255,0.14); transition:all 0.2s;
+            background: rgba(255,255,255,0.08); color:rgba(255,255,255,0.7); font-size:0.9rem; font-weight:600;
+            padding:0.9rem 1.5rem; border-radius:12px; text-decoration:none;
+            border:1px solid rgba(255,255,255,0.15); transition:all 0.2s;
         }
-        .btn-download:hover { background:rgba(255,255,255,0.12); color:#fff; }
-        .btn-tag { font-size:0.65rem; font-weight:600; background:rgba(22,163,74,0.25); color:#4ADE80; padding:0.15rem 0.5rem; border-radius:4px; }
+        .btn-hero-secondary:hover { background:rgba(255,255,255,0.14); color:#fff; }
+        .hero-trust {
+            display:flex; gap:2.5rem; margin-top:3.5rem; padding-top:2.5rem;
+            border-top:1px solid rgba(255,255,255,0.08);
+            justify-content:center; flex-wrap:wrap; position:relative;
+        }
+        .trust-item { text-align:center; }
+        .trust-num { font-size:1.75rem; font-weight:800; color:#fff; letter-spacing:-0.04em; }
+        .trust-label { font-size:0.7rem; color:rgba(255,255,255,0.3); font-weight:500; margin-top:0.15rem; }
 
-        /* TRUST BAR */
-        .trust-bar { background:rgba(255,255,255,0.03); border-top:1px solid rgba(255,255,255,0.06); border-bottom:1px solid rgba(255,255,255,0.06); padding:1rem 2.5rem; }
-        .trust-inner { max-width:900px; margin:0 auto; display:flex; align-items:center; justify-content:center; gap:3rem; flex-wrap:wrap; }
-        .trust-item { display:flex; align-items:center; gap:0.5rem; color:rgba(255,255,255,0.3); font-size:0.75rem; font-weight:500; }
-        .trust-icon { font-size:0.9rem; }
+        /* SHARED SECTION STYLES */
+        .section { padding:6rem 2.5rem; }
+        .section-inner { max-width:1100px; margin:0 auto; }
+        .section-alt { background: var(--section-alt); }
+        .section-dark { background: var(--hero); }
+        .section-center { text-align:center; }
 
-        /* SHARED */
+        /* H2 — títulos de seção */
         .section-label {
             font-size:0.68rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
-            color:var(--primary); margin-bottom:0.875rem;
+            color:var(--primary); margin-bottom:0.75rem; display:block;
         }
-        .section-title { font-size:clamp(1.5rem,3vw,2.25rem); font-weight:800; letter-spacing:-0.03em; line-height:1.2; margin-bottom:1rem; }
-        .section-desc { font-size:0.975rem; color:var(--text-muted); line-height:1.75; max-width:540px; }
-        .fade { opacity:0; transform:translateY(18px); transition:opacity 0.6s ease, transform 0.6s ease; }
+        .section-label-light { color:var(--primary-light); }
+        h2.section-title {
+            font-size: clamp(1.5rem, 3vw, 2.25rem);
+            font-weight:800; letter-spacing:-0.03em; line-height:1.2; margin-bottom:1rem;
+        }
+        h2.section-title-light { color:#fff; }
+        .section-desc { font-size:0.975rem; color:var(--text-muted); line-height:1.75; max-width:580px; }
+        .section-desc-light { color:rgba(255,255,255,0.45); }
+
+        /* FADE ANIMATION */
+        .fade { opacity:0; transform:translateY(20px); transition:opacity 0.65s ease, transform 0.65s ease; }
         .fade.on { opacity:1; transform:translateY(0); }
         .fd1 { transition-delay:0.1s; }
         .fd2 { transition-delay:0.2s; }
         .fd3 { transition-delay:0.3s; }
+        .fd4 { transition-delay:0.4s; }
 
-        /* PLANOS */
-        .plans-section { padding:7rem 2.5rem; max-width:1100px; margin:0 auto; }
-        .plans-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:3.5rem; }
-        .plan-card {
-            background:var(--card); border:1.5px solid var(--border); border-radius:22px;
-            padding:2rem; position:relative; transition:transform 0.2s, box-shadow 0.2s;
+        /* SOBRE / BEM-VINDO */
+        .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; margin-top:3.5rem; }
+        .about-img {
+            border-radius:24px; overflow:hidden; aspect-ratio:4/3;
+            background:linear-gradient(135deg, #e0e8f0, #c0d4e8);
+            position:relative;
         }
-        .plan-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(0,0,0,0.08); }
-        .plan-card.featured {
-            border-color:var(--primary); background:linear-gradient(145deg,#fff,#f0f7ff);
+        .about-img img { width:100%; height:100%; object-fit:cover; display:block; }
+        .about-img-placeholder { width:100%; height:100%; display:flex; align-items:center; justify-content:center; font-size:4rem; }
+        .about-content { display:flex; flex-direction:column; gap:1.5rem; }
+        .about-quote {
+            font-size:1.15rem; font-weight:700; color:var(--primary);
+            font-style:italic; line-height:1.55;
+            border-left:3px solid var(--primary); padding-left:1.25rem;
         }
-        .plan-badge {
-            position:absolute; top:-1px; left:50%; transform:translateX(-50%);
-            background:var(--primary); color:#fff; font-size:0.65rem; font-weight:700;
-            letter-spacing:0.08em; text-transform:uppercase; padding:0.3rem 1rem; border-radius:0 0 10px 10px;
-        }
-        .plan-name { font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.5rem; }
-        .plan-price { font-size:2.25rem; font-weight:800; letter-spacing:-0.04em; margin-bottom:0.25rem; }
-        .plan-price sup { font-size:1rem; font-weight:600; vertical-align:top; margin-top:0.5rem; margin-right:0.2rem; }
-        .plan-period { font-size:0.8rem; color:var(--text-muted); margin-bottom:0.25rem; }
-        .plan-aquarios {
-            display:inline-flex; align-items:center; gap:0.4rem;
-            background:rgba(124,92,191,0.08); border:1px solid rgba(124,92,191,0.2);
-            color:var(--accent); font-size:0.7rem; font-weight:700;
-            padding:0.3rem 0.75rem; border-radius:100px; margin-bottom:1.25rem;
-        }
-        .plan-divider { border:none; border-top:1px solid var(--border); margin:1.25rem 0; }
-        .plan-features { list-style:none; display:flex; flex-direction:column; gap:0.6rem; }
-        .plan-features li { font-size:0.825rem; color:var(--text-muted); display:flex; align-items:flex-start; gap:0.6rem; line-height:1.45; }
-        .plan-features li::before { content:'✓'; color:var(--success); font-weight:700; font-size:0.8rem; flex-shrink:0; margin-top:0.05rem; }
-        .plan-cta {
-            display:block; width:100%; text-align:center;
-            background:var(--primary); color:#fff; font-size:0.9rem; font-weight:700;
-            padding:0.875rem; border-radius:12px; text-decoration:none; margin-top:1.75rem;
-            transition:opacity 0.2s;
-        }
-        .plan-cta:hover { opacity:0.9; }
-        .plan-cta.secondary {
-            background:transparent; color:var(--primary); border:1.5px solid var(--primary);
-        }
-        .plan-cta.secondary:hover { background:rgba(0,119,204,0.06); }
 
-        /* AQUARIOS BRINDE */
-        .brinde-section { background:var(--hero); padding:7rem 2.5rem; }
-        .brinde-inner { max-width:1100px; margin:0 auto; }
-        .brinde-section .section-label { color:var(--primary-light); }
-        .brinde-section .section-title { color:#fff; }
-        .brinde-section .section-desc { color:rgba(255,255,255,0.45); }
-        .brinde-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; margin-top:4rem; }
-        .brinde-steps { display:flex; flex-direction:column; gap:1.5rem; }
-        .brinde-step { display:flex; gap:1.25rem; align-items:flex-start; }
-        .step-num {
-            width:36px; height:36px; border-radius:50%; flex-shrink:0;
-            background: rgba(0,119,204,0.2); border:1px solid rgba(0,119,204,0.4);
-            color:var(--primary-light); font-size:0.8rem; font-weight:800;
-            display:flex; align-items:center; justify-content:center;
+        /* H3 — sub-títulos dentro de seções */
+        h3.sub-title { font-size:1.1rem; font-weight:700; margin-bottom:0.5rem; letter-spacing:-0.01em; }
+        h3.sub-title-light { color:#fff; }
+        .about-bullets { list-style:none; display:flex; flex-direction:column; gap:0.625rem; }
+        .about-bullets li { font-size:0.875rem; color:var(--text-muted); display:flex; gap:0.625rem; align-items:flex-start; }
+        .about-bullets li::before { content:'✓'; color:var(--green); font-weight:700; flex-shrink:0; }
+
+        /* SERVIÇOS GRID */
+        .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:3.5rem; }
+        .service-card {
+            background:var(--card); border:1.5px solid var(--border); border-radius:20px;
+            padding:1.75rem; transition:transform 0.2s, box-shadow 0.2s, border-color 0.2s;
         }
-        .step-title { font-size:0.9rem; font-weight:700; color:#fff; margin-bottom:0.2rem; }
-        .step-desc { font-size:0.8rem; color:rgba(255,255,255,0.4); line-height:1.6; }
-        .brinde-card {
-            background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09);
-            border-radius:22px; padding:2rem;
+        .service-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(0,0,0,0.08); border-color:rgba(10,110,189,0.3); }
+        .svc-icon { font-size:2rem; margin-bottom:1rem; }
+        /* H3 para nome do serviço */
+        h3.svc-name { font-size:0.975rem; font-weight:700; margin-bottom:0.5rem; letter-spacing:-0.01em; }
+        .svc-desc { font-size:0.8rem; color:var(--text-muted); line-height:1.65; }
+
+        /* TECNOLOGIA */
+        .tech-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; margin-top:3.5rem; }
+        .tech-img {
+            border-radius:20px; overflow:hidden; aspect-ratio:16/10;
+            background:linear-gradient(135deg, #0a1628, #0f2040);
         }
-        .brinde-card-title { font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:1.25rem; }
-        .aquarios-modules { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; }
+        .tech-img img { width:100%; height:100%; object-fit:cover; display:block; }
+        .tech-features { display:flex; flex-direction:column; gap:1.25rem; }
+        .tech-item { display:flex; gap:1rem; align-items:flex-start; }
+        .tech-icon-wrap {
+            width:44px; height:44px; border-radius:12px; flex-shrink:0;
+            background:rgba(10,110,189,0.1); border:1px solid rgba(10,110,189,0.2);
+            display:flex; align-items:center; justify-content:center; font-size:1.25rem;
+        }
+        /* H4 para features de tecnologia */
+        h4.tech-title { font-size:0.875rem; font-weight:700; margin-bottom:0.2rem; }
+        .tech-desc { font-size:0.8rem; color:var(--text-muted); line-height:1.6; }
+
+        /* AQUARIOS SECTION */
+        .aquarios-section { background:linear-gradient(155deg, #1A0F2E, #0F1A2E); padding:7rem 2.5rem; }
+        .aquarios-inner { max-width:1100px; margin:0 auto; }
+        .aquarios-grid { display:grid; grid-template-columns:1fr 1fr; gap:4.5rem; align-items:center; margin-top:3.5rem; }
+        .aquarios-card {
+            background:rgba(255,255,255,0.04); border:1px solid rgba(124,92,191,0.2);
+            border-radius:24px; padding:2rem;
+        }
+        /* H3 dentro de AquariOS */
+        h3.aq-title { font-size:0.8rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:1.25rem; }
+        .aq-modules { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; }
         .aq-mod {
             background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.07);
             border-radius:12px; padding:0.875rem;
             display:flex; align-items:center; gap:0.625rem;
         }
-        .aq-mod-icon { font-size:1.1rem; }
-        .aq-mod-name { font-size:0.775rem; font-weight:600; color:rgba(255,255,255,0.7); }
-        .brinde-download {
-            margin-top:1.5rem; background:var(--primary); color:#fff;
-            font-size:0.875rem; font-weight:700; padding:0.875rem 1.5rem;
-            border-radius:12px; text-decoration:none; display:flex; align-items:center;
-            justify-content:center; gap:0.5rem; transition:opacity 0.2s;
-        }
-        .brinde-download:hover { opacity:0.9; }
-        .brinde-download-note { font-size:0.68rem; color:rgba(255,255,255,0.3); text-align:center; margin-top:0.625rem; }
-
-        /* CHATBOT */
-        .chat-section { padding:7rem 2.5rem; max-width:960px; margin:0 auto; text-align:center; }
-        .chat-demo {
-            background:var(--card); border:1px solid var(--border); border-radius:24px;
-            overflow:hidden; margin-top:3rem; box-shadow:0 8px 40px rgba(0,0,0,0.06);
-        }
-        .chat-header {
-            background:var(--hero); padding:1rem 1.5rem;
-            display:flex; align-items:center; gap:0.75rem;
-        }
-        .chat-avatar {
-            width:34px; height:34px; border-radius:50%; background:var(--primary);
-            display:flex; align-items:center; justify-content:center; font-size:0.9rem;
-        }
-        .chat-name { font-size:0.875rem; font-weight:700; color:#fff; }
-        .chat-status { font-size:0.7rem; color:rgba(255,255,255,0.4); }
-        .chat-status span { color:#4ADE80; }
-        .chat-body { padding:1.5rem; min-height:300px; display:flex; flex-direction:column; gap:1rem; }
-        .chat-msg { display:flex; gap:0.75rem; align-items:flex-start; max-width:80%; }
-        .chat-msg.user { align-self:flex-end; flex-direction:row-reverse; }
-        .msg-avatar { width:28px; height:28px; border-radius:50%; background:var(--bg); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:0.75rem; border:1px solid var(--border); }
-        .msg-avatar.bot { background:var(--primary); color:#fff; }
-        .msg-bubble {
-            background:var(--bg); border:1px solid var(--border);
-            border-radius:16px; border-bottom-left-radius:4px;
-            padding:0.75rem 1rem; font-size:0.85rem; color:var(--text); line-height:1.6;
-        }
-        .chat-msg.user .msg-bubble { background:var(--primary); color:#fff; border:none; border-radius:16px; border-bottom-right-radius:4px; }
-        .chat-input-row { padding:1rem 1.5rem; border-top:1px solid var(--border); display:flex; gap:0.75rem; }
-        .chat-input {
-            flex:1; background:var(--bg); border:1px solid var(--border);
-            border-radius:12px; padding:0.75rem 1rem; font-size:0.875rem;
-            color:var(--text); font-family:inherit; outline:none;
-        }
-        .chat-send {
-            background:var(--primary); color:#fff; border:none;
-            border-radius:12px; padding:0.75rem 1.25rem; font-size:0.875rem;
-            font-weight:700; cursor:pointer; font-family:inherit; transition:opacity 0.2s;
-        }
-        .chat-send:hover { opacity:0.9; }
-        .chat-note { font-size:0.72rem; color:var(--text-muted); margin-top:1rem; }
-
-        /* ELEVENLABS WIDGET CONTAINER */
-        .el-widget-wrap {
-            margin-top:3rem; border-radius:24px; overflow:hidden;
-            border:1px solid var(--border); min-height:400px;
+        .aq-icon { font-size:1.1rem; }
+        /* H4 nome do módulo */
+        h4.aq-name { font-size:0.775rem; font-weight:600; color:rgba(255,255,255,0.7); }
+        .aq-steps { display:flex; flex-direction:column; gap:1.5rem; }
+        .aq-step { display:flex; gap:1.25rem; align-items:flex-start; }
+        .step-num {
+            width:34px; height:34px; border-radius:50%; flex-shrink:0;
+            background:rgba(124,92,191,0.25); border:1px solid rgba(124,92,191,0.4);
+            color:var(--accent-light); font-size:0.78rem; font-weight:800;
             display:flex; align-items:center; justify-content:center;
-            background:var(--card);
         }
-        .el-placeholder {
-            text-align:center; padding:3rem; color:var(--text-muted);
+        /* H4 para passos */
+        h4.step-title { font-size:0.9rem; font-weight:700; color:#fff; margin-bottom:0.2rem; }
+        .step-desc { font-size:0.8rem; color:rgba(255,255,255,0.4); line-height:1.6; }
+        .aq-download {
+            margin-top:2rem; background:var(--accent); color:#fff;
+            font-size:0.9rem; font-weight:700; padding:0.9rem 1.5rem;
+            border-radius:12px; text-decoration:none; display:inline-flex;
+            align-items:center; gap:0.5rem; transition:opacity 0.2s;
         }
-        .el-placeholder-icon { font-size:3rem; margin-bottom:1rem; }
-        .el-placeholder-title { font-size:1.1rem; font-weight:700; margin-bottom:0.5rem; color:var(--text); }
-        .el-placeholder-desc { font-size:0.875rem; line-height:1.7; }
+        .aq-download:hover { opacity:0.9; }
 
-        /* DOWNLOAD */
-        .download-section { padding:6rem 2.5rem; max-width:720px; margin:0 auto; text-align:center; }
-        .download-card {
-            background:var(--card); border:1px solid var(--border); border-radius:24px;
-            padding:2.5rem; margin-top:2rem;
+        /* CONVÊNIOS */
+        .convenios-grid { display:flex; flex-wrap:wrap; gap:1rem; margin-top:2.5rem; justify-content:center; }
+        .convenio-tag {
+            background:var(--card); border:1.5px solid var(--border);
+            border-radius:12px; padding:0.75rem 1.25rem;
+            font-size:0.85rem; font-weight:600; color:var(--text);
+            transition:border-color 0.2s, box-shadow 0.2s;
         }
-        .download-icon { font-size:3rem; margin-bottom:1rem; }
-        .download-title { font-size:1.25rem; font-weight:800; margin-bottom:0.5rem; }
-        .download-desc { font-size:0.875rem; color:var(--text-muted); margin-bottom:2rem; line-height:1.7; }
-        .download-btn {
-            display:inline-flex; align-items:center; gap:0.75rem;
-            background:var(--text); color:#fff; font-size:0.975rem; font-weight:700;
-            padding:1rem 2rem; border-radius:14px; text-decoration:none; transition:opacity 0.2s;
+        .convenio-tag:hover { border-color:var(--primary); box-shadow:0 4px 16px rgba(10,110,189,0.1); }
+
+        /* DEPOIMENTOS */
+        .testimonials-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:3.5rem; }
+        .testimonial-card {
+            background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08);
+            border-radius:20px; padding:1.75rem;
         }
-        .download-btn:hover { opacity:0.85; }
-        .download-steps { display:flex; flex-direction:column; gap:0.6rem; margin-top:1.75rem; text-align:left; }
-        .dl-step { font-size:0.8rem; color:var(--text-muted); display:flex; align-items:flex-start; gap:0.625rem; }
-        .dl-step-n { font-size:0.7rem; font-weight:700; background:var(--bg); border:1px solid var(--border); border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+        .testi-stars { font-size:0.9rem; margin-bottom:1rem; letter-spacing:0.1em; }
+        .testi-text { font-size:0.85rem; color:rgba(255,255,255,0.6); line-height:1.75; font-style:italic; margin-bottom:1rem; }
+        .testi-author { font-size:0.78rem; font-weight:700; color:rgba(255,255,255,0.45); }
+
+        /* GALERIA */
+        .gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:3rem; }
+        .gallery-item {
+            border-radius:16px; overflow:hidden; aspect-ratio:4/3;
+            background:linear-gradient(135deg, #e0e8f0, #c0d4e8);
+            transition:transform 0.2s, box-shadow 0.2s;
+        }
+        .gallery-item:hover { transform:scale(1.02); box-shadow:0 12px 32px rgba(0,0,0,0.1); }
+        .gallery-item img { width:100%; height:100%; object-fit:cover; display:block; }
+        .gallery-item:first-child { grid-column:span 2; }
+
+        /* BLOG */
+        .blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:3rem; }
+        .blog-card {
+            background:var(--card); border:1.5px solid var(--border); border-radius:20px;
+            overflow:hidden; transition:transform 0.2s, box-shadow 0.2s;
+        }
+        .blog-card:hover { transform:translateY(-3px); box-shadow:0 12px 32px rgba(0,0,0,0.07); }
+        .blog-img {
+            aspect-ratio:16/9; background:linear-gradient(135deg, #e0eaf5, #bbd0e8);
+            display:flex; align-items:center; justify-content:center; font-size:2rem;
+        }
+        .blog-body { padding:1.25rem; }
+        .blog-tag { font-size:0.65rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--primary); margin-bottom:0.5rem; display:block; }
+        /* H3 para título do post */
+        h3.blog-title { font-size:0.925rem; font-weight:700; margin-bottom:0.5rem; line-height:1.4; letter-spacing:-0.01em; }
+        .blog-excerpt { font-size:0.775rem; color:var(--text-muted); line-height:1.65; }
+        .blog-read { font-size:0.75rem; font-weight:700; color:var(--primary); text-decoration:none; display:inline-flex; align-items:center; gap:0.3rem; margin-top:0.875rem; transition:gap 0.2s; }
+        .blog-read:hover { gap:0.5rem; }
+
+        /* BAIRROS */
+        .bairros-list { display:flex; flex-wrap:wrap; gap:0.625rem; margin-top:1.5rem; justify-content:center; }
+        .bairro-tag { background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.5); font-size:0.78rem; font-weight:500; padding:0.45rem 0.875rem; border-radius:100px; }
+
+        /* AGENDAR / CTA */
+        .cta-section { background:linear-gradient(135deg, var(--primary-dark), var(--primary)); padding:7rem 2.5rem; text-align:center; }
+        .cta-inner { max-width:640px; margin:0 auto; }
+        /* H2 dentro do CTA */
+        h2.cta-title { font-size:clamp(1.75rem,3.5vw,2.75rem); font-weight:800; color:#fff; letter-spacing:-0.03em; margin-bottom:1rem; line-height:1.15; }
+        .cta-sub { font-size:1rem; color:rgba(255,255,255,0.55); margin-bottom:2.5rem; line-height:1.75; }
+        .cta-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+        .btn-cta-primary {
+            display:inline-flex; align-items:center; gap:0.625rem;
+            background:#fff; color:var(--primary); font-size:0.975rem; font-weight:800;
+            padding:0.95rem 2rem; border-radius:14px; text-decoration:none; transition:opacity 0.2s;
+        }
+        .btn-cta-primary:hover { opacity:0.9; }
+        .btn-cta-ghost {
+            display:inline-flex; align-items:center; gap:0.625rem;
+            background:rgba(255,255,255,0.12); color:#fff; font-size:0.9rem; font-weight:600;
+            padding:0.95rem 1.75rem; border-radius:14px; text-decoration:none;
+            border:1px solid rgba(255,255,255,0.2); transition:background 0.2s;
+        }
+        .btn-cta-ghost:hover { background:rgba(255,255,255,0.2); }
 
         /* FOOTER */
-        footer { background:var(--hero); border-top:1px solid rgba(255,255,255,0.05); padding:4rem 2.5rem 2rem; }
+        footer { background: var(--hero); border-top:1px solid rgba(255,255,255,0.05); padding:4rem 2.5rem 2rem; }
         .footer-inner { max-width:1100px; margin:0 auto; }
-        .footer-top { display:grid; grid-template-columns:220px 1fr; gap:4rem; margin-bottom:3rem; }
-        .footer-logo { font-size:1.1rem; font-weight:800; color:#fff; margin-bottom:0.4rem; }
-        .footer-tagline { font-size:0.775rem; color:rgba(255,255,255,0.3); margin-bottom:0.5rem; }
-        .footer-powered { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.7rem; color:rgba(255,255,255,0.2); }
-        .footer-powered a { color:rgba(124,92,191,0.7); text-decoration:none; }
-        .footer-powered a:hover { color:rgba(124,92,191,1); }
+        .footer-top { display:grid; grid-template-columns:240px 1fr; gap:4rem; margin-bottom:3rem; }
+        .footer-logo { font-size:1.1rem; font-weight:800; color:#fff; margin-bottom:0.35rem; }
+        .footer-tagline { font-size:0.775rem; color:rgba(255,255,255,0.3); margin-bottom:0.35rem; }
+        .footer-address { font-size:0.72rem; color:rgba(255,255,255,0.2); line-height:1.7; }
+        .footer-powered { margin-top:1rem; font-size:0.7rem; color:rgba(255,255,255,0.2); }
+        .footer-powered a { color:rgba(124,92,191,0.6); text-decoration:none; transition:color 0.2s; }
+        .footer-powered a:hover { color:var(--accent-light); }
         .footer-cols { display:grid; grid-template-columns:repeat(4,1fr); gap:2rem; }
-        .footer-col-title { font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:1rem; }
+        /* H4 para footer col titles */
+        h4.footer-col-title { font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:1rem; }
         .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.6rem; }
         .footer-col ul li a { color:rgba(255,255,255,0.4); font-size:0.8rem; text-decoration:none; transition:color 0.2s; }
         .footer-col ul li a:hover { color:#fff; }
+        .footer-social { display:flex; gap:0.75rem; margin-top:1rem; }
+        .social-btn {
+            width:32px; height:32px; border-radius:8px; background:rgba(255,255,255,0.07);
+            border:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center;
+            font-size:0.875rem; text-decoration:none; transition:background 0.2s;
+        }
+        .social-btn:hover { background:rgba(255,255,255,0.14); }
         .footer-bottom { border-top:1px solid rgba(255,255,255,0.05); padding-top:1.5rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.75rem; }
         .footer-bottom span { font-size:0.7rem; color:rgba(255,255,255,0.18); }
 
         /* RESPONSIVE */
-        @media (max-width:768px) {
-            .nav-links { display:none; }
-            .plans-grid { grid-template-columns:1fr; }
-            .brinde-grid { grid-template-columns:1fr; }
+        @media (max-width:900px) {
+            .about-grid, .tech-grid, .aquarios-grid { grid-template-columns:1fr; gap:2.5rem; }
+            .services-grid { grid-template-columns:1fr 1fr; }
+            .testimonials-grid { grid-template-columns:1fr; }
+            .blog-grid { grid-template-columns:1fr; }
+            .gallery-grid { grid-template-columns:1fr 1fr; }
+            .gallery-item:first-child { grid-column:span 2; }
             .footer-top { grid-template-columns:1fr; gap:2rem; }
             .footer-cols { grid-template-columns:1fr 1fr; }
+        }
+        @media (max-width:600px) {
+            nav { padding:0.875rem 1.25rem; }
+            .nav-links { display:none; }
+            .section { padding:4.5rem 1.25rem; }
+            .services-grid { grid-template-columns:1fr; }
+            .gallery-grid { grid-template-columns:1fr; }
+            .gallery-item:first-child { grid-column:span 1; }
+            .footer-cols { grid-template-columns:1fr 1fr; }
+            .cta-btns { flex-direction:column; }
         }
     </style>
 </head>
@@ -322,260 +426,466 @@
 
 <!-- NAV -->
 <nav>
-    <div class="nav-logo"><div class="nav-logo-dot"></div>OdontolarPlus</div>
+    <div class="nav-logo">
+        <div class="nav-logo-icon">🦷</div>
+        <span class="nav-logo-text">Odontolar Plus</span>
+    </div>
     <ul class="nav-links">
-        <li><a href="#planos">Planos</a></li>
+        <li><a href="#sobre">A Clínica</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#tecnologia">Tecnologia</a></li>
         <li><a href="#aquarios">AquariOS</a></li>
-        <li><a href="#assistente">Assistente</a></li>
-        <li><a href="#download">App</a></li>
+        <li><a href="#blog">Blog</a></li>
     </ul>
     <div class="nav-actions">
-        <a class="nav-download" href="#download">📲 Baixar app</a>
-        <a class="nav-cta" href="#planos">Ver planos</a>
+        <a class="nav-aquarios" href="#aquarios">✦ AquariOS</a>
+        <a class="nav-btn" href="https://wa.me/5531983140497?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20na%20Odontolar%20Plus">Agendar consulta</a>
     </div>
 </nav>
 
 <!-- HERO -->
-<div class="hero">
-    <div class="hero-badge"><div class="badge-dot"></div>Planos com IA inclusa</div>
-    <h1 class="fade">Cuidado odontológico completo.<br><em>Mais saúde integral</em> <span>de brinde.</span></h1>
-    <p class="hero-sub fade fd1">Assine um plano Odontolar e ganhe acesso ao AquariOS — seu assistente pessoal de saúde integral com inteligência artificial.</p>
-    <div class="hero-btns fade fd2">
-        <a class="btn-primary" href="#planos">Ver planos →</a>
-        <a class="btn-download" href="https://github.com/fabianogleite-lab/aquarios/releases/download/v0.1.0-beta/app-debug.apk">
-            📲 Baixar AquariOS <span class="btn-tag">Beta</span>
-        </a>
-    </div>
-</div>
+<header class="hero">
+    <div class="hero-badge"><div class="badge-dot"></div>Clínica Odontológica Premium · BH</div>
 
-<!-- TRUST BAR -->
-<div class="trust-bar" style="background:rgba(15,25,35,1)">
-    <div class="trust-inner">
-        <div class="trust-item"><span class="trust-icon">🔐</span>Privacidade total — LGPD</div>
-        <div class="trust-item"><span class="trust-icon">🤖</span>Powered by Claude AI</div>
-        <div class="trust-item"><span class="trust-icon">🩺</span>Telemedicina inclusa</div>
-        <div class="trust-item"><span class="trust-icon">📱</span>App Android disponível</div>
-    </div>
-</div>
+    <!-- H1 — ÚNICO NA PÁGINA -->
+    <h1>Cuidado odontológico premium.<br><em>Saúde bucal que cuida do ser inteiro.</em></h1>
 
-<!-- PLANOS -->
-<div id="planos" class="plans-section">
-    <div class="fade">
-        <div class="section-label">Planos Odontolar</div>
-        <h2 class="section-title">Escolha o plano certo para você.</h2>
-        <p class="section-desc">Todos os planos incluem acesso ao AquariOS — seu assistente pessoal de saúde integral, sem custo adicional.</p>
+    <p class="hero-sub">Drs. Fabiano e Gustavo Leite — 36 anos de experiência em gestão preventiva da saúde bucal. Alinhadores, implantes, próteses e estética dental. Tratamento parcelado em Pix e cartão.</p>
+    <div class="hero-btns">
+        <a class="btn-hero-primary" href="https://wa.me/5531983140497?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta">📅 Agendar consulta</a>
+        <a class="btn-hero-secondary" href="#aquarios">✦ Conheça o AquariOS</a>
     </div>
-    <div class="plans-grid">
-        <div class="plan-card fade">
-            <div class="plan-name">Essencial</div>
-            <div class="plan-price"><sup>R$</sup>89</div>
-            <div class="plan-period">por mês · pessoa física</div>
-            <div class="plan-aquarios">✦ AquariOS incluso</div>
-            <hr class="plan-divider">
-            <ul class="plan-features">
-                <li>Consultas e limpeza semestral</li>
-                <li>Radiografias periapicais</li>
-                <li>Urgências odontológicas</li>
-                <li>AquariOS: ProteOS + Nutrição + Diário</li>
-                <li>Suporte via assistente IA</li>
-            </ul>
-            <a class="plan-cta secondary" href="https://odontolar.com.br" target="_blank" rel="noopener">Contratar →</a>
-        </div>
-        <div class="plan-card featured fade fd1">
-            <div class="plan-badge">Mais popular</div>
-            <div class="plan-name">Integral</div>
-            <div class="plan-price"><sup>R$</sup>149</div>
-            <div class="plan-period">por mês · pessoa física</div>
-            <div class="plan-aquarios">✦ AquariOS completo incluso</div>
-            <hr class="plan-divider">
-            <ul class="plan-features">
-                <li>Tudo do plano Essencial</li>
-                <li>Tratamentos restauradores</li>
-                <li>Endodontia (raiz)</li>
-                <li>Telemedicina Rapidoc inclusa</li>
-                <li>AquariOS: todos os 9 módulos</li>
-                <li>iVi — Índice de Vitalidade Individual</li>
-                <li>Comunidades + Diário do Ser</li>
-            </ul>
-            <a class="plan-cta" href="https://odontolar.com.br" target="_blank" rel="noopener">Contratar →</a>
-        </div>
-        <div class="plan-card fade fd2">
-            <div class="plan-name">Família</div>
-            <div class="plan-price"><sup>R$</sup>299</div>
-            <div class="plan-period">por mês · até 4 vidas</div>
-            <div class="plan-aquarios">✦ AquariOS para cada membro</div>
-            <hr class="plan-divider">
-            <ul class="plan-features">
-                <li>Tudo do plano Integral</li>
-                <li>Cobertura para até 4 pessoas</li>
-                <li>Ortodontia (análise e contenção)</li>
-                <li>Pediatria odontológica</li>
-                <li>AquariOS individual para cada vida</li>
-                <li>Histórico familiar de saúde</li>
-            </ul>
-            <a class="plan-cta secondary" href="https://odontolar.com.br" target="_blank" rel="noopener">Contratar →</a>
+    <div class="hero-trust fade">
+        <div class="trust-item"><div class="trust-num">36</div><div class="trust-label">Anos de experiência</div></div>
+        <div class="trust-item"><div class="trust-num">6+</div><div class="trust-label">Convênios aceitos</div></div>
+        <div class="trust-item"><div class="trust-num">11</div><div class="trust-label">Bairros atendidos</div></div>
+        <div class="trust-item"><div class="trust-num">∞</div><div class="trust-label">Sorrisos transformados</div></div>
+    </div>
+</header>
+
+<!-- SOBRE -->
+<section id="sobre" class="section">
+    <div class="section-inner">
+        <div class="about-grid">
+            <div class="about-img fade">
+                <img
+                    src="https://static.wixstatic.com/media/b5636d_04033c44411045bd93670644d46bce66~mv2.jpg/v1/fill/w_780,h_585,al_c,q_85/b5636d_04033c44411045bd93670644d46bce66~mv2.jpg"
+                    alt="Dr. Fabiano Leite em momento de atualização técnica, evidenciando compromisso com educação continuada em odontologia"
+                    loading="lazy"
+                    onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'about-img-placeholder\'>🦷</div>'"
+                >
+            </div>
+            <div class="about-content fade fd1">
+                <span class="section-label">A Clínica</span>
+                <h2 class="section-title">Bem-vindo à Odontolar Plus Prime.</h2>
+                <blockquote class="about-quote">"A boca é a porta de entrada para o seu corpo. Cuidar dela é cuidar de tudo."</blockquote>
+                <p style="font-size:0.95rem; color:var(--text-muted); line-height:1.8;">Fundada pelos Drs. Fabiano e Gustavo Leite, a Odontolar Plus é uma clínica dental modelo premium com foco em gestão preventiva da saúde bucal. Nossa abordagem une tecnologia avançada, atendimento personalizado e a compreensão de que a saúde bucal é parte inseparável do bem-estar integral.</p>
+                <ul class="about-bullets">
+                    <li>Equipe multidisciplinar com atualização técnica contínua</li>
+                    <li>Tecnologia de escaneamento intraoral e planejamento digital</li>
+                    <li>Ambiente projetado para conforto e acolhimento do paciente</li>
+                    <li>Atendimento a pacientes com ansiedade — sedação consciente disponível</li>
+                    <li>Odontopediatria: cuidado especializado para bebês e crianças</li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
-<!-- AQUARIOS BRINDE -->
-<div id="aquarios" class="brinde-section">
-    <div class="brinde-inner">
+<!-- SERVIÇOS -->
+<section id="servicos" class="section section-alt">
+    <div class="section-inner">
+        <div class="section-center fade">
+            <span class="section-label">Tratamentos</span>
+            <h2 class="section-title">O que oferecemos.</h2>
+            <p class="section-desc" style="margin:0 auto;">Da prevenção à estética, oferecemos cuidado completo com tecnologia de ponta e equipe especializada.</p>
+        </div>
+        <div class="services-grid">
+            <article class="service-card fade">
+                <div class="svc-icon">🦷</div>
+                <h3 class="svc-name">Alinhadores Invisíveis</h3>
+                <p class="svc-desc">Planejamento digital com escaneamento intraoral. Alinhadores transparentes discretos e eficazes para adultos e adolescentes.</p>
+            </article>
+            <article class="service-card fade fd1">
+                <div class="svc-icon">🔩</div>
+                <h3 class="svc-name">Implantes Dentários</h3>
+                <p class="svc-desc">Solução definitiva para dentes ausentes com alta taxa de sucesso. Planejamento cirúrgico preciso e acompanhamento completo.</p>
+            </article>
+            <article class="service-card fade fd2">
+                <div class="svc-icon">✨</div>
+                <h3 class="svc-name">Estética Dental</h3>
+                <p class="svc-desc">Clareamento dental, facetas de porcelana e lentes de contato dental. Resultados visíveis que respeitam a naturalidade do seu sorriso.</p>
+            </article>
+            <article class="service-card fade">
+                <div class="svc-icon">🦴</div>
+                <h3 class="svc-name">Próteses Dentárias</h3>
+                <p class="svc-desc">Próteses fixas e removíveis confeccionadas com materiais premium para restaurar função mastigatória e estética com precisão.</p>
+            </article>
+            <article class="service-card fade fd1">
+                <div class="svc-icon">🛡️</div>
+                <h3 class="svc-name">Prevenção e Limpeza</h3>
+                <p class="svc-desc">Limpeza profissional, fluoretação e avaliações periódicas para identificar e tratar problemas antes que avancem.</p>
+            </article>
+            <article class="service-card fade fd2">
+                <div class="svc-icon">👶</div>
+                <h3 class="svc-name">Odontopediatria</h3>
+                <p class="svc-desc">Cuidado especializado para bebês e crianças. Ambiente acolhedor e abordagem gentil para criar relação positiva com o dentista desde cedo.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- TECNOLOGIA -->
+<section id="tecnologia" class="section">
+    <div class="section-inner">
+        <div class="tech-grid">
+            <div class="fade">
+                <span class="section-label">Inovação</span>
+                <h2 class="section-title">Tecnologia de ponta a serviço do seu sorriso.</h2>
+                <p class="section-desc">Investimos continuamente em equipamentos e protocolos de última geração para diagnósticos mais precisos e tratamentos mais eficazes.</p>
+                <div class="tech-features" style="margin-top:2rem;">
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap">🔬</div>
+                        <div>
+                            <h4 class="tech-title">Escaneamento Intraoral</h4>
+                            <p class="tech-desc">Digitalização precisa da arcada dentária para planejamento digital de alinhadores e próteses sem moldes desconfortáveis.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap">💻</div>
+                        <div>
+                            <h4 class="tech-title">Planejamento Digital</h4>
+                            <p class="tech-desc">Software avançado para simulação do resultado final antes do início do tratamento. Você vê o sorriso antes de começar.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap">📡</div>
+                        <div>
+                            <h4 class="tech-title">Radiografia Digital</h4>
+                            <p class="tech-desc">Imagens de alta resolução com menor exposição à radiação. Diagnóstico mais rápido e preciso.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap">😴</div>
+                        <div>
+                            <h4 class="tech-title">Sedação Consciente</h4>
+                            <p class="tech-desc">Para pacientes com ansiedade ou fobia. Tratamento tranquilo, seguro e indolor — você relaxa, nós cuidamos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-img fade fd1">
+                <img
+                    src="https://static.wixstatic.com/media/b5636d_f73332ce71ca4a0a9513f627cc9093f9~mv2.jpg/v1/fill/w_780,h_490,al_c,q_85/b5636d_f73332ce71ca4a0a9513f627cc9093f9~mv2.jpg"
+                    alt="Planejamento digital de alinhadores dentários com software de escaneamento intraoral, tecnologia utilizada no Odontolar Plus Prime"
+                    loading="lazy"
+                    style="width:100%;height:100%;object-fit:cover;display:block;"
+                    onerror="this.style.display='none'"
+                >
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AQUARIOS INTEGRATION -->
+<section id="aquarios" class="aquarios-section">
+    <div class="aquarios-inner">
         <div class="fade">
-            <div class="section-label">Benefício exclusivo</div>
-            <h2 class="section-title">AquariOS incluso em todo plano.</h2>
-            <p class="section-desc">Não é só saúde do dente. É saúde do ser. Com qualquer plano Odontolar você acessa o AquariOS — assistente pessoal de saúde integral com IA.</p>
+            <span class="section-label section-label-light">Exclusivo para assinantes</span>
+            <h2 class="section-title section-title-light">AquariOS incluso no seu plano.</h2>
+            <p class="section-desc section-desc-light">Assinantes Odontolar Plus ganham acesso ao AquariOS — assistente pessoal de saúde integral com inteligência artificial. Porque saúde bucal é parte de uma saúde maior.</p>
         </div>
-        <div class="brinde-grid">
-            <div class="brinde-steps fade fd1">
-                <div class="brinde-step">
+        <div class="aquarios-grid">
+            <div class="aq-steps fade fd1">
+                <div class="aq-step">
                     <div class="step-num">1</div>
                     <div>
-                        <div class="step-title">Assine qualquer plano Odontolar</div>
-                        <div class="step-desc">Escolha o plano ideal para você ou sua família. O AquariOS vem incluso, sem custo adicional.</div>
+                        <h4 class="step-title">Assine um plano Odontolar</h4>
+                        <p class="step-desc">Escolha o plano ideal. O AquariOS vem incluso, sem custo adicional.</p>
                     </div>
                 </div>
-                <div class="brinde-step">
+                <div class="aq-step">
                     <div class="step-num">2</div>
                     <div>
-                        <div class="step-title">Baixe o app AquariOS</div>
-                        <div class="step-desc">Disponível para Android. Beta ativo — faça o download direto neste site ou aguarde a Play Store.</div>
+                        <h4 class="step-title">Baixe o app AquariOS</h4>
+                        <p class="step-desc">Disponível para Android. Download direto — sem precisar da Play Store.</p>
                     </div>
                 </div>
-                <div class="brinde-step">
+                <div class="aq-step">
                     <div class="step-num">3</div>
                     <div>
-                        <div class="step-title">Ative com seu e-mail do plano</div>
-                        <div class="step-desc">Use o e-mail cadastrado na Odontolar para fazer login. O acesso é vinculado automaticamente ao seu plano.</div>
+                        <h4 class="step-title">Ative com seu e-mail do plano</h4>
+                        <p class="step-desc">Login com o e-mail cadastrado na Odontolar. Acesso vinculado automaticamente.</p>
                     </div>
                 </div>
-                <div class="brinde-step">
+                <div class="aq-step">
                     <div class="step-num">4</div>
                     <div>
-                        <div class="step-title">Cuide de tudo em um único lugar</div>
-                        <div class="step-desc">Saúde do dente, corpo, mente, emoção, sono, nutrição — integrados, verificados e protegidos.</div>
+                        <h4 class="step-title">Cuide de tudo — corpo, mente e sorriso</h4>
+                        <p class="step-desc">Saúde física, mental, espiritual e social integradas em um único assistente.</p>
                     </div>
                 </div>
+                <a class="aq-download" href="https://github.com/fabianogleite-lab/aquarios/releases/download/v0.1.0-beta/app-debug.apk">
+                    📲 Baixar AquariOS (Android · Beta)
+                </a>
+                <p style="font-size:0.7rem; color:rgba(255,255,255,0.25); margin-top:0.5rem;">84 MB · Android 10+ · Requer plano ativo</p>
             </div>
-            <div class="fade fd2">
-                <div class="brinde-card">
-                    <div class="brinde-card-title">O que você acessa no AquariOS</div>
-                    <div class="aquarios-modules">
-                        <div class="aq-mod"><span class="aq-mod-icon">🤖</span><span class="aq-mod-name">ProteOS</span></div>
-                        <div class="aq-mod"><span class="aq-mod-icon">🩺</span><span class="aq-mod-name">AsclepiOS</span></div>
-                        <div class="aq-mod"><span class="aq-mod-icon">🥗</span><span class="aq-mod-name">Nutrição</span></div>
-                        <div class="aq-mod"><span class="aq-mod-icon">✨</span><span class="aq-mod-name">EteriOS</span></div>
-                        <div class="aq-mod"><span class="aq-mod-icon">📓</span><span class="aq-mod-name">Diário do Ser</span></div>
-                        <div class="aq-mod"><span class="aq-mod-icon">👥</span><span class="aq-mod-name">Comunidades</span></div>
-                        <div class="aq-mod"><span class="aq-mod-icon">🌙</span><span class="aq-mod-name">SandeirOS</span></div>
-                        <div class="aq-mod"><span class="aq-mod-icon">📊</span><span class="aq-mod-name">HermeOS</span></div>
-                    </div>
-                    <a class="brinde-download" href="https://github.com/fabianogleite-lab/aquarios/releases/download/v0.1.0-beta/app-debug.apk">
-                        📲 Baixar AquariOS (Android · Beta)
-                    </a>
-                    <div class="brinde-download-note">84 MB · Android 10+ · Requer plano ativo</div>
+            <div class="aquarios-card fade fd2">
+                <h3 class="aq-title">O que você acessa no AquariOS</h3>
+                <div class="aq-modules">
+                    <div class="aq-mod"><span class="aq-icon">🤖</span><h4 class="aq-name">ProteOS — IA pessoal</h4></div>
+                    <div class="aq-mod"><span class="aq-icon">🩺</span><h4 class="aq-name">AsclepiOS — Saúde clínica</h4></div>
+                    <div class="aq-mod"><span class="aq-icon">🥗</span><h4 class="aq-name">Nutrição inteligente</h4></div>
+                    <div class="aq-mod"><span class="aq-icon">✨</span><h4 class="aq-name">EteriOS — Sono e recuperação</h4></div>
+                    <div class="aq-mod"><span class="aq-icon">📓</span><h4 class="aq-name">Diário do Ser</h4></div>
+                    <div class="aq-mod"><span class="aq-icon">👥</span><h4 class="aq-name">Comunidades</h4></div>
+                    <div class="aq-mod"><span class="aq-icon">🌙</span><h4 class="aq-name">Autoconhecimento</h4></div>
+                    <div class="aq-mod"><span class="aq-icon">📊</span><h4 class="aq-name">iVi — Score de saúde</h4></div>
+                </div>
+                <div style="margin-top:1.5rem; padding:1rem; background:rgba(124,92,191,0.1); border:1px solid rgba(124,92,191,0.2); border-radius:12px;">
+                    <p style="font-size:0.78rem; color:rgba(255,255,255,0.5); line-height:1.7;">
+                        <strong style="color:rgba(255,255,255,0.7);">Por que faz sentido?</strong><br>
+                        Doenças periodontais estão associadas a diabetes e doenças cardíacas. O AquariOS monitora saúde física, mental, espiritual e social — e conecta tudo ao seu histórico odontológico.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<!-- ASSISTENTE IA -->
-<div id="assistente" class="chat-section">
-    <div class="fade">
-        <div class="section-label">ProteOS — Assistente IA</div>
-        <h2 class="section-title">Fale com nosso assistente.</h2>
-        <p class="section-desc" style="margin:0 auto">Tire dúvidas sobre planos, AquariOS ou saúde integral. O ProteOS está aqui — direto, amoroso e sem enrolação.</p>
-    </div>
-
-    <!-- ElevenLabs widget: substitua YOUR_AGENT_ID pelo ID do agente criado em elevenlabs.io -->
-    <div class="el-widget-wrap" id="elWidgetContainer">
-        <div class="el-placeholder">
-            <div class="el-placeholder-icon">🤖</div>
-            <div class="el-placeholder-title">Assistente ProteOS</div>
-            <div class="el-placeholder-desc">Configure seu Agent ID do ElevenLabs<br>para ativar o assistente de voz aqui.</div>
+<!-- CONVÊNIOS -->
+<section class="section section-alt">
+    <div class="section-inner section-center">
+        <div class="fade">
+            <span class="section-label">Convênios aceitos</span>
+            <h2 class="section-title">Atendemos os principais convênios.</h2>
+            <p class="section-desc" style="margin:0 auto;">Trabalhamos com os planos mais utilizados em Belo Horizonte. Consulte disponibilidade para o seu plano.</p>
+        </div>
+        <div class="convenios-grid fade fd1">
+            <div class="convenio-tag">Odontoprev</div>
+            <div class="convenio-tag">Rede Una</div>
+            <div class="convenio-tag">SulAmérica</div>
+            <div class="convenio-tag">Porto Seguro</div>
+            <div class="convenio-tag">Amil</div>
+            <div class="convenio-tag">Bradesco Saúde</div>
+            <div class="convenio-tag">Pix ✓</div>
+            <div class="convenio-tag">Cartão parcelado ✓</div>
         </div>
     </div>
-    <!-- Após criar o agente em elevenlabs.io/app/conversational-ai, substitua o bloco acima por:
-    <elevenlabs-convai agent-id="YOUR_AGENT_ID"></elevenlabs-convai>
-    <script src="https://elevenlabs.io/convai-widget/index.js" async></script>
-    -->
+</section>
 
-    <p class="chat-note fade fd1">Powered by ElevenLabs Conversational AI + Claude · Seus dados não são armazenados durante a conversa.</p>
-</div>
-
-<!-- DOWNLOAD -->
-<div id="download" class="download-section">
-    <div class="fade">
-        <div class="section-label">App AquariOS</div>
-        <h2 class="section-title">Baixe agora para Android.</h2>
-        <p class="section-desc" style="margin:0 auto">Beta disponível para assinantes Odontolar e testadores. Google Play em breve.</p>
-    </div>
-    <div class="download-card fade fd1">
-        <div class="download-icon">📲</div>
-        <div class="download-title">AquariOS Beta — Android</div>
-        <div class="download-desc">Versão de desenvolvimento. Instale diretamente no seu Android enquanto aguardamos a publicação na Play Store.</div>
-        <a class="download-btn" href="https://github.com/fabianogleite-lab/aquarios/releases/download/v0.1.0-beta/app-debug.apk">
-            ⬇ Baixar APK (84 MB)
-        </a>
-        <div class="download-steps">
-            <div class="dl-step"><div class="dl-step-n">1</div>Toque em "Baixar APK" e aguarde o download completo.</div>
-            <div class="dl-step"><div class="dl-step-n">2</div>Vá em Configurações → Segurança → habilite "Instalar de fontes desconhecidas" (ou "Fontes não confiáveis").</div>
-            <div class="dl-step"><div class="dl-step-n">3</div>Abra o arquivo APK na pasta Downloads e toque em Instalar.</div>
-            <div class="dl-step"><div class="dl-step-n">4</div>Faça login com o e-mail do seu plano Odontolar.</div>
+<!-- DEPOIMENTOS -->
+<section class="section section-dark">
+    <div class="section-inner">
+        <div class="fade">
+            <span class="section-label section-label-light">Depoimentos</span>
+            <h2 class="section-title section-title-light">O que nossos pacientes dizem.</h2>
+        </div>
+        <div class="testimonials-grid">
+            <article class="testimonial-card fade fd1">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-text">"A equipe foi incrível! Desde a recepção até o tratamento, me senti acolhida e bem cuidada. O clareamento dental superou minhas expectativas!"</p>
+                <div class="testi-author">Maria S. — Buritis</div>
+            </article>
+            <article class="testimonial-card fade fd2">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-text">"Sempre tive medo de dentista, mas aqui me senti à vontade. O tratamento foi rápido e indolor. Recomendo a todos que têm ansiedade!"</p>
+                <div class="testi-author">João P. — Belvedere</div>
+            </article>
+            <article class="testimonial-card fade fd3">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-text">"Os alinhadores mudaram minha vida. O planejamento digital antes do início foi o que me convenceu. Vi meu sorriso novo antes de começar!"</p>
+                <div class="testi-author">Ana C. — Estoril</div>
+            </article>
         </div>
     </div>
-</div>
+</section>
+
+<!-- GALERIA -->
+<section class="section">
+    <div class="section-inner">
+        <div class="fade">
+            <span class="section-label">Galeria</span>
+            <h2 class="section-title">Nossa clínica e nossos resultados.</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item fade">
+                <img
+                    src="https://static.wixstatic.com/media/b5636d_7f10dd43d7c94b4e99617a03a9592ba1~mv2.png/v1/fill/w_920,h_690,al_c,q_85/b5636d_7f10dd43d7c94b4e99617a03a9592ba1~mv2.png"
+                    alt="Odontolar Plus Prime — Clínica Odontológica Premium em Belo Horizonte"
+                    loading="lazy"
+                    onerror="this.style.display='none'"
+                >
+            </div>
+            <div class="gallery-item fade fd1">
+                <img
+                    src="https://static.wixstatic.com/media/b5636d_f7175b6961a24e3d87a633962fcef8d4~mv2.jpg/v1/fill/w_460,h_345,al_c,q_85/b5636d_f7175b6961a24e3d87a633962fcef8d4~mv2.jpg"
+                    alt="Tratamento ortodôntico com alinhadores transparentes, tecnologia de ponta no Odontolar Plus Prime"
+                    loading="lazy"
+                    onerror="this.style.display='none'"
+                >
+            </div>
+            <div class="gallery-item fade fd2">
+                <img
+                    src="https://static.wixstatic.com/media/b5636d_315843cac6ec42bea58c0c083bc6a924~mv2.jpg/v1/fill/w_460,h_345,al_c,q_85/b5636d_315843cac6ec42bea58c0c083bc6a924~mv2.jpg"
+                    alt="Acompanhamento familiar dental, odontopediatria na Odontolar Plus"
+                    loading="lazy"
+                    onerror="this.style.display='none'"
+                >
+            </div>
+            <div class="gallery-item fade fd1">
+                <img
+                    src="https://static.wixstatic.com/media/b5636d_7793c69814574925b090b382fcc39378~mv2.jpg/v1/fill/w_460,h_345,al_c,q_85/b5636d_7793c69814574925b090b382fcc39378~mv2.jpg"
+                    alt="Ambiente acolhedor e moderno da Odontolar Plus Prime"
+                    loading="lazy"
+                    onerror="this.style.display='none'"
+                >
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="section section-alt">
+    <div class="section-inner">
+        <div class="fade">
+            <span class="section-label">Saúde e Conhecimento</span>
+            <h2 class="section-title">Artigos do blog Odontolar Plus.</h2>
+            <p class="section-desc">Conteúdo sobre saúde bucal, bem-estar integral e cuidados preventivos — escrito pelos próprios doutores.</p>
+        </div>
+        <div class="blog-grid">
+            <article class="blog-card fade fd1">
+                <div class="blog-img">🦷</div>
+                <div class="blog-body">
+                    <span class="blog-tag">Saúde Integral</span>
+                    <h3 class="blog-title">Odontologia Integral e Bem-Estar: a Boca Como Porta de Entrada para o Corpo</h3>
+                    <p class="blog-excerpt">Doenças periodontais estão associadas a diabetes e doenças cardíacas. Entenda como a saúde bucal influencia o organismo como um todo.</p>
+                    <a class="blog-read" href="https://www.odontolarplus.com.br/post/odontologia-integral-e-bem-estar-saúde-integral-e-odontologia-para-você" target="_blank" rel="noopener">Ler artigo →</a>
+                </div>
+            </article>
+            <article class="blog-card fade fd2">
+                <div class="blog-img">📋</div>
+                <div class="blog-body">
+                    <span class="blog-tag">Planos</span>
+                    <h3 class="blog-title">Benefícios da Assinatura para Saúde Bucal Continuada</h3>
+                    <p class="blog-excerpt">Como o modelo de assinatura transforma o cuidado odontológico de reativo para preventivo — e por que isso economiza dinheiro e saúde.</p>
+                    <a class="blog-read" href="https://www.odontolarplus.com.br/post/benefícios-da-assinatura-para-saúde-bucal-continuada" target="_blank" rel="noopener">Ler artigo →</a>
+                </div>
+            </article>
+            <article class="blog-card fade fd3">
+                <div class="blog-img">⭐</div>
+                <div class="blog-body">
+                    <span class="blog-tag">Premium</span>
+                    <h3 class="blog-title">Cuidados Dentários Premium na Odontolar Plus Prime</h3>
+                    <p class="blog-excerpt">O que significa atendimento premium em odontologia — tecnologia, acolhimento e educação em saúde bucal no mesmo lugar.</p>
+                    <a class="blog-read" href="https://www.odontolarplus.com.br/post/cuidados-dentários-premium-na-odontolar-plus-prime" target="_blank" rel="noopener">Ler artigo →</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- BAIRROS ATENDIDOS -->
+<section class="section section-dark">
+    <div class="section-inner section-center">
+        <div class="fade">
+            <span class="section-label section-label-light">Localização</span>
+            <h2 class="section-title section-title-light">Jardim América, Belo Horizonte.</h2>
+            <p class="section-desc section-desc-light" style="margin:0 auto;">Nossa clínica fica na Rua Jardim América, 1916 — de fácil acesso a toda a região Oeste e Sul de BH.</p>
+        </div>
+        <div class="bairros-list fade fd1">
+            <span class="bairro-tag">Jardim América</span>
+            <span class="bairro-tag">Barão Homem de Melo</span>
+            <span class="bairro-tag">Estoril</span>
+            <span class="bairro-tag">Buritis</span>
+            <span class="bairro-tag">Belvedere</span>
+            <span class="bairro-tag">Nova Suíça</span>
+            <span class="bairro-tag">Gutierrez</span>
+            <span class="bairro-tag">Cidade Jardim</span>
+            <span class="bairro-tag">São Bento</span>
+            <span class="bairro-tag">Anchieta</span>
+            <span class="bairro-tag">Luxemburgo</span>
+        </div>
+    </div>
+</section>
+
+<!-- AGENDAR CTA -->
+<section class="cta-section">
+    <div class="cta-inner fade">
+        <h2 class="cta-title">Agende sua consulta hoje.</h2>
+        <p class="cta-sub">Tratamento parcelado em Pix e cartão. Convênios aceitos. Atendimento personalizado com os Drs. Fabiano e Gustavo Leite.</p>
+        <div class="cta-btns">
+            <a class="btn-cta-primary" href="https://wa.me/5531983140497?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20na%20Odontolar%20Plus">
+                💬 WhatsApp — Agendar agora
+            </a>
+            <a class="btn-cta-ghost" href="#aquarios">✦ Conheça o AquariOS</a>
+        </div>
+    </div>
+</section>
 
 <!-- FOOTER -->
 <footer>
     <div class="footer-inner">
         <div class="footer-top">
             <div>
-                <div class="footer-logo">OdontolarPlus</div>
-                <div class="footer-tagline">Planos odontológicos com saúde integral</div>
-                <div class="footer-powered">Powered by <a href="https://podiumtec.com.br" target="_blank">AquariOS</a> &amp; ARKHE Labs</div>
+                <div class="footer-logo">Odontolar Plus</div>
+                <div class="footer-tagline">Clínica Odontológica Premium · BH</div>
+                <div class="footer-address">
+                    Rua Jardim América, 1916<br>
+                    Belo Horizonte — MG, Brasil<br>
+                    <a href="https://wa.me/5531983140497" style="color:rgba(255,255,255,0.3);text-decoration:none;">WhatsApp para agendamento</a>
+                </div>
+                <div class="footer-social">
+                    <a class="social-btn" href="https://facebook.com/odontolarclinica" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+                    <a class="social-btn" href="https://instagram.com/odontolarplus" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+                </div>
+                <div class="footer-powered">
+                    Powered by <a href="https://podiumtec.com.br" target="_blank" rel="noopener">AquariOS</a> &amp; ARKHE Labs
+                </div>
             </div>
             <div class="footer-cols">
                 <div>
-                    <div class="footer-col-title">Planos</div>
+                    <h4 class="footer-col-title">Serviços</h4>
                     <ul>
-                        <li><a href="#planos">Essencial</a></li>
-                        <li><a href="#planos">Integral</a></li>
-                        <li><a href="#planos">Família</a></li>
-                        <li><a href="https://odontolar.com.br" target="_blank">Contratar</a></li>
+                        <li><a href="#servicos">Alinhadores</a></li>
+                        <li><a href="#servicos">Implantes</a></li>
+                        <li><a href="#servicos">Estética Dental</a></li>
+                        <li><a href="#servicos">Próteses</a></li>
+                        <li><a href="#servicos">Odontopediatria</a></li>
                     </ul>
                 </div>
                 <div>
-                    <div class="footer-col-title">AquariOS</div>
+                    <h4 class="footer-col-title">Convênios</h4>
+                    <ul>
+                        <li><a href="#servicos">Odontoprev</a></li>
+                        <li><a href="#servicos">Rede Una</a></li>
+                        <li><a href="#servicos">SulAmérica</a></li>
+                        <li><a href="#servicos">Porto Seguro</a></li>
+                        <li><a href="#servicos">Amil · Bradesco</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">AquariOS</h4>
                     <ul>
                         <li><a href="#aquarios">O que é</a></li>
-                        <li><a href="#download">Download</a></li>
+                        <li><a href="https://github.com/fabianogleite-lab/aquarios/releases/download/v0.1.0-beta/app-debug.apk">Baixar app</a></li>
                         <li><a href="https://podiumtec.com.br" target="_blank">Site oficial</a></li>
-                        <li><a href="#assistente">Assistente IA</a></li>
+                        <li><a href="#aquarios">Planos com AquariOS</a></li>
                     </ul>
                 </div>
                 <div>
-                    <div class="footer-col-title">Suporte</div>
-                    <ul>
-                        <li><a href="mailto:contato@odontolarplus.com.br">Contato</a></li>
-                        <li><a href="#assistente">Chat com IA</a></li>
-                        <li><a href="https://wa.me/5551983140497">WhatsApp</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="footer-col-title">Legal</div>
+                    <h4 class="footer-col-title">Legal</h4>
                     <ul>
                         <li><a href="privacy-policy.html">Privacidade</a></li>
                         <li><a href="privacy-policy.html">LGPD</a></li>
-                        <li><a href="terms.html">Termos</a></li>
+                        <li><a href="https://wa.me/5531983140497">Contato</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <span>&copy; 2026 OdontolarPlus · Fabiano Gomes Leite · ARKHE Labs</span>
-            <span>LGPD Lei 13.709/2018 · CFO regulamentado</span>
+            <span>&copy; 2026 Odontolar Plus · Drs. Fabiano e Gustavo Leite · ARKHE Labs</span>
+            <span>CFO regulamentado · LGPD Lei 13.709/2018</span>
         </div>
     </div>
 </footer>

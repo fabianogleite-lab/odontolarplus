@@ -482,6 +482,51 @@
         }
         .faq-a a:hover { text-decoration:underline; }
 
+        /* FLOATING SMART CTA */
+        #smart-cta {
+            position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(120px);
+            z-index:200; width:min(480px, calc(100vw - 32px));
+            background:#fff; border-radius:16px;
+            box-shadow:0 8px 40px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06);
+            display:flex; align-items:center; gap:12px; padding:14px 16px;
+            transition:transform 0.45s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s;
+            opacity:0; pointer-events:none;
+        }
+        #smart-cta.visible {
+            transform:translateX(-50%) translateY(0);
+            opacity:1; pointer-events:all;
+        }
+        #smart-cta.hiding {
+            transform:translateX(-50%) translateY(120px);
+            opacity:0; pointer-events:none;
+        }
+        .scta-avatar {
+            width:40px; height:40px; border-radius:50%; flex-shrink:0;
+            background:linear-gradient(135deg, var(--primary), var(--accent));
+            display:flex; align-items:center; justify-content:center;
+            font-size:1.1rem;
+        }
+        .scta-body { flex:1; min-width:0; }
+        .scta-msg {
+            font-size:0.8rem; color:var(--text-muted); line-height:1.4; margin-bottom:6px;
+        }
+        .scta-btn {
+            display:inline-flex; align-items:center; gap:6px;
+            background:var(--primary); color:#fff;
+            font-size:0.78rem; font-weight:700;
+            padding:7px 14px; border-radius:8px;
+            text-decoration:none; border:none; cursor:pointer;
+            transition:opacity 0.2s; white-space:nowrap;
+        }
+        .scta-btn:hover { opacity:0.88; }
+        .scta-close {
+            width:28px; height:28px; border-radius:50%; flex-shrink:0;
+            background:rgba(0,0,0,0.06); border:none; cursor:pointer;
+            display:flex; align-items:center; justify-content:center;
+            font-size:0.8rem; color:var(--text-muted); transition:background 0.2s;
+        }
+        .scta-close:hover { background:rgba(0,0,0,0.12); }
+
         /* RESPONSIVE */
         @media (max-width:900px) {
             .about-grid, .tech-grid, .aquarios-grid { grid-template-columns:1fr; gap:2.5rem; }
@@ -921,6 +966,16 @@
 </section>
 <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 
+<!-- SMART CTA FLUTUANTE -->
+<div id="smart-cta" role="complementary" aria-label="Assistente Odontolar Plus">
+    <div class="scta-avatar">🦷</div>
+    <div class="scta-body">
+        <p class="scta-msg" id="scta-msg">Posso ajudar a encontrar o tratamento certo para você.</p>
+        <a class="scta-btn" id="scta-btn" href="https://wa.me/5531983140497" target="_blank" rel="noopener">Tirar dúvidas agora →</a>
+    </div>
+    <button class="scta-close" id="scta-close" aria-label="Fechar">✕</button>
+</div>
+
 <!-- FAQ -->
 <section id="faq" class="section section-alt">
     <div class="section-inner">
@@ -1298,6 +1353,82 @@
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
     }, { threshold: 0.07 });
     document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+    // ── SMART CTA — trigger contextual por seção e tempo ──
+    const CTX = {
+        hero:       { msg:'Posso ajudar a encontrar o tratamento certo para você.', cta:'Tirar dúvidas agora →', wa:'Olá, vim do site e quero orientação sobre tratamentos' },
+        sobre:      { msg:'Somos uma família atendendo sua família. Quer conhecer a equipe?', cta:'Falar com a equipe →', wa:'Olá, gostaria de conhecer mais sobre a Odontolar Plus' },
+        servicos:   { msg:'Qual tratamento você está considerando?', cta:'Descobrir meu tratamento →', wa:'Olá, estou avaliando um tratamento e gostaria de orientação' },
+        'svc-alinhadores': { msg:'Alinhadores invisíveis — você é candidato? Descubra agora.', cta:'Avaliar meu caso →', wa:'Olá, tenho interesse em alinhadores invisíveis. Como funciona a avaliação?' },
+        'svc-implantes':   { msg:'Implante dentário — tire suas dúvidas sem compromisso.', cta:'Consultar sobre implante →', wa:'Olá, tenho interesse em implante dentário e gostaria de mais informações.' },
+        'svc-estetica':    { msg:'Clareamento, facetas, lentes — veja qual combina com você.', cta:'Simular meu sorriso →', wa:'Olá, tenho interesse em estética dental. Podem me orientar?' },
+        'svc-proteses':    { msg:'Prótese dentária — recupere função e estética.', cta:'Avaliar meu caso →', wa:'Olá, preciso de informações sobre prótese dentária.' },
+        'svc-prevencao':   { msg:'Limpeza e check-up — a prevenção mais barata que existe.', cta:'Agendar limpeza →', wa:'Olá, quero agendar profilaxia e check-up dental.' },
+        'svc-odontopediatria': { msg:'Cuidado especial para os pequenos — primeiros anos são decisivos.', cta:'Agendar consulta infantil →', wa:'Olá, quero agendar consulta odontopediátrica para meu filho.' },
+        tecnologia: { msg:'Veja seu resultado antes de começar — planejamento digital.', cta:'Agendar consulta digital →', wa:'Olá, me interessei pela tecnologia digital da clínica. Posso agendar?' },
+        aquarios:   { msg:'AquariOS incluso no plano — saúde integral no celular.', cta:'Ver planos com AquariOS →', wa:'Olá, quero saber sobre os planos com AquariOS incluído.' },
+        convenios:  { msg:'Seu convênio é aceito aqui — confirme agora.', cta:'Confirmar meu convênio →', wa:'Olá, gostaria de confirmar se meu convênio é aceito.' },
+        faq:        { msg:'Ainda tem dúvidas? Respondo na hora — sem robô.', cta:'Tirar dúvidas agora →', wa:'Olá, ainda tenho dúvidas e gostaria de conversar.' },
+        depoimentos:{ msg:'75 avaliações ★★★★★ no Google — venha ser o próximo.', cta:'Agendar minha consulta →', wa:'Olá, vi os depoimentos e gostaria de agendar uma consulta.' },
+        blog:       { msg:'Informação que cuida — agende e cuide de você também.', cta:'Agendar consulta →', wa:'Olá, li o blog e gostaria de agendar uma avaliação.' }
+    };
+
+    const scta      = document.getElementById('smart-cta');
+    const sctaMsg   = document.getElementById('scta-msg');
+    const sctaBtn   = document.getElementById('scta-btn');
+    const sctaClose = document.getElementById('scta-close');
+
+    let currentSection = 'hero';
+    let dismissed = false;
+    let triggered = false;
+
+    function showCTA(sectionId) {
+        if (dismissed) return;
+        const c = CTX[sectionId] || CTX['hero'];
+        sctaMsg.textContent = c.msg;
+        sctaBtn.textContent = c.cta;
+        sctaBtn.href = 'https://wa.me/5531983140497?text=' + encodeURIComponent(c.wa);
+        scta.classList.remove('hiding');
+        scta.classList.add('visible');
+        triggered = true;
+    }
+
+    function hideCTA() { scta.classList.add('hiding'); scta.classList.remove('visible'); }
+
+    sctaClose.addEventListener('click', () => { dismissed = true; hideCTA(); });
+
+    // Seções de alta intenção → trigger em 25s
+    const HIGH_INTENT = new Set(['servicos','svc-alinhadores','svc-implantes','svc-estetica','svc-proteses','convenios','faq']);
+    let sectionTimer = null;
+
+    // Detecta seção atual (scroll)
+    const allSectionEls = document.querySelectorAll('section[id], article[id]');
+    const sectionVisObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (!e.isIntersecting) return;
+            currentSection = e.target.id;
+            if (dismissed) return;
+            clearTimeout(sectionTimer);
+            const delay = HIGH_INTENT.has(currentSection) ? 25000 : 45000;
+            sectionTimer = setTimeout(() => showCTA(currentSection), delay);
+            // Se já disparou, atualiza mensagem dinamicamente
+            if (triggered && !dismissed) showCTA(currentSection);
+        });
+    }, { threshold: 0.4 });
+    allSectionEls.forEach(el => sectionVisObs.observe(el));
+
+    // Trigger geral em 45s independente da seção
+    setTimeout(() => { if (!triggered && !dismissed) showCTA(currentSection); }, 45000);
+
+    // Scroll profundo (>70%) sem trigger → aciona em 30s
+    window.addEventListener('scroll', (() => {
+        let checked = false;
+        return () => {
+            if (checked || triggered || dismissed) return;
+            const pct = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+            if (pct > 0.7) { checked = true; setTimeout(() => { if (!triggered) showCTA(currentSection); }, 30000); }
+        };
+    })(), { passive: true });
 
     // ── TIME-ON-SECTION TRACKER (alimenta ProteOS) ──
     const _sections = ['sobre','servicos','tecnologia','aquarios','convenios','faq','blog'];

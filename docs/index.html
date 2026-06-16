@@ -60,6 +60,25 @@
     }
     </script>
 
+    <!-- SCHEMA FAQPage — rich results Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Onde fica a clínica odontológica Odontolar Plus em BH?","acceptedAnswer":{"@type":"Answer","text":"Na Av. Barão Homem de Melo, 1916 – Jardim América, Belo Horizonte – MG. Atendemos BH e também Contagem e Nova Lima."}},
+        {"@type":"Question","name":"Como agendar consulta odontológica em Belo Horizonte?","acceptedAnswer":{"@type":"Answer","text":"Pelo WhatsApp. Envie seu nome, objetivo ou dor/queixa e melhor horário para agendamento."}},
+        {"@type":"Question","name":"Quais especialidades odontológicas a Odontolar Plus realiza?","acceptedAnswer":{"@type":"Answer","text":"Implantodontia, estética dental, alinhadores invisíveis, periodontia, endodontia (canal) e prevenção."}},
+        {"@type":"Question","name":"Implante dentário dói? Como é o pós-operatório?","acceptedAnswer":{"@type":"Answer","text":"É feito com anestesia e planejamento cirúrgico. No pós, pode haver desconforto controlável com medicação e orientações específicas."}},
+        {"@type":"Question","name":"Vocês atendem convênios odontológicos como Porto Seguro, Amil e SulAmérica?","acceptedAnswer":{"@type":"Answer","text":"Sim. A cobertura varia por plano e procedimento — confirmamos no agendamento pelo WhatsApp."}},
+        {"@type":"Question","name":"Quanto tempo leva um tratamento com alinhadores invisíveis?","acceptedAnswer":{"@type":"Answer","text":"Varia conforme o caso e a colaboração no uso (mínimo 22h/dia). Definido após avaliação e planejamento digital."}},
+        {"@type":"Question","name":"Vocês atendem urgência odontológica — dor forte, inchaço, trauma dental?","acceptedAnswer":{"@type":"Answer","text":"Conforme disponibilidade. Em caso de dor intensa, trauma ou inchaço, chame no WhatsApp para priorização imediata."}},
+        {"@type":"Question","name":"Vocês fazem profilaxia — limpeza dental e check-up?","acceptedAnswer":{"@type":"Answer","text":"Sim. Limpeza profissional e check-up conforme indicação clínica. Intervalo recomendado varia por histórico do paciente."}},
+        {"@type":"Question","name":"Quais formas de pagamento vocês aceitam?","acceptedAnswer":{"@type":"Answer","text":"Pix, cartão parcelado e convênios odontológicos. As opções variam por tratamento — confirme no agendamento."}}
+      ]
+    }
+    </script>
+
     <style>
         :root {
             --bg: #F8F6F2;
@@ -399,6 +418,32 @@
         .footer-bottom { border-top:1px solid rgba(255,255,255,0.05); padding-top:1.5rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.75rem; }
         .footer-bottom span { font-size:0.7rem; color:rgba(255,255,255,0.18); }
 
+        /* SERVICE CTA */
+        .svc-cta {
+            display:inline-flex; align-items:center; gap:0.4rem;
+            margin-top:1rem; font-size:0.78rem; font-weight:700;
+            color:var(--primary); text-decoration:none; transition:gap 0.2s;
+        }
+        .svc-cta:hover { gap:0.6rem; }
+        .svc-cta-shopify {
+            display:inline-flex; align-items:center; gap:0.4rem;
+            margin-top:0.5rem; font-size:0.75rem; font-weight:600;
+            color:var(--text-muted); text-decoration:none; transition:color 0.2s;
+            border:1px solid var(--border); border-radius:6px; padding:0.3rem 0.6rem;
+        }
+        .svc-cta-shopify:hover { color:var(--text); border-color:var(--primary); }
+
+        /* FAQ CTA PROMPT */
+        .faq-cta-prompt {
+            display:block; font-style:italic; color:var(--primary);
+            font-weight:600; font-size:0.875rem;
+            margin:0.875rem 0 0.625rem;
+            padding:0.625rem 1rem;
+            background:rgba(10,110,189,0.06);
+            border-left:3px solid var(--primary);
+            border-radius:0 8px 8px 0; line-height:1.6;
+        }
+
         /* FAQ ACCORDION */
         .faq-list { margin-top:3rem; display:flex; flex-direction:column; gap:0; }
         .faq-item {
@@ -540,35 +585,47 @@
             <p class="section-desc" style="margin:0 auto;">Da prevenção à estética, oferecemos cuidado completo com tecnologia de ponta e equipe especializada.</p>
         </div>
         <div class="services-grid">
-            <article class="service-card fade">
+            <article class="service-card fade" id="svc-alinhadores">
                 <div class="svc-icon">🦷</div>
                 <h3 class="svc-name">Alinhadores Invisíveis</h3>
                 <p class="svc-desc">Planejamento digital com escaneamento intraoral. Alinhadores transparentes discretos e eficazes para adultos e adolescentes.</p>
+                <a class="svc-cta" href="https://wa.me/5531983140497?text=Quero+saber+sobre+alinhadores+invisíveis" target="_blank" rel="noopener">Agendar avaliação de alinhadores →</a>
+                <br><a class="svc-cta-shopify" href="https://odontolar-plus.myshopify.com/collections/all" target="_blank" rel="noopener">🛒 Ver plano + preço</a>
             </article>
-            <article class="service-card fade fd1">
+            <article class="service-card fade fd1" id="svc-implantes">
                 <div class="svc-icon">🔩</div>
                 <h3 class="svc-name">Implantes Dentários</h3>
                 <p class="svc-desc">Solução definitiva para dentes ausentes com alta taxa de sucesso. Planejamento cirúrgico preciso e acompanhamento completo.</p>
+                <a class="svc-cta" href="https://wa.me/5531983140497?text=Quero+informações+sobre+implante+dentário" target="_blank" rel="noopener">Consultar sobre implantes →</a>
+                <br><a class="svc-cta-shopify" href="https://odontolar-plus.myshopify.com/collections/all" target="_blank" rel="noopener">🛒 Ver plano + preço</a>
             </article>
-            <article class="service-card fade fd2">
+            <article class="service-card fade fd2" id="svc-estetica">
                 <div class="svc-icon">✨</div>
                 <h3 class="svc-name">Estética Dental</h3>
                 <p class="svc-desc">Clareamento dental, facetas de porcelana e lentes de contato dental. Resultados visíveis que respeitam a naturalidade do seu sorriso.</p>
+                <a class="svc-cta" href="https://wa.me/5531983140497?text=Quero+saber+sobre+estética+dental+e+clareamento" target="_blank" rel="noopener">Simular meu novo sorriso →</a>
+                <br><a class="svc-cta-shopify" href="https://odontolar-plus.myshopify.com/collections/all" target="_blank" rel="noopener">🛒 Ver plano + preço</a>
             </article>
-            <article class="service-card fade">
+            <article class="service-card fade" id="svc-proteses">
                 <div class="svc-icon">🦴</div>
                 <h3 class="svc-name">Próteses Dentárias</h3>
                 <p class="svc-desc">Próteses fixas e removíveis confeccionadas com materiais premium para restaurar função mastigatória e estética com precisão.</p>
+                <a class="svc-cta" href="https://wa.me/5531983140497?text=Preciso+de+informações+sobre+prótese+dentária" target="_blank" rel="noopener">Avaliar meu caso →</a>
+                <br><a class="svc-cta-shopify" href="https://odontolar-plus.myshopify.com/collections/all" target="_blank" rel="noopener">🛒 Ver plano + preço</a>
             </article>
-            <article class="service-card fade fd1">
+            <article class="service-card fade fd1" id="svc-prevencao">
                 <div class="svc-icon">🛡️</div>
                 <h3 class="svc-name">Prevenção e Limpeza</h3>
                 <p class="svc-desc">Limpeza profissional, fluoretação e avaliações periódicas para identificar e tratar problemas antes que avancem.</p>
+                <a class="svc-cta" href="https://wa.me/5531983140497?text=Quero+agendar+limpeza+dental+e+check-up" target="_blank" rel="noopener">Agendar check-up preventivo →</a>
+                <br><a class="svc-cta-shopify" href="https://odontolar-plus.myshopify.com/products/profilaxia-limpeza-dental-com-checkup" target="_blank" rel="noopener">🛒 Comprar Profilaxia + Checkup</a>
             </article>
-            <article class="service-card fade fd2">
+            <article class="service-card fade fd2" id="svc-odontopediatria">
                 <div class="svc-icon">👶</div>
                 <h3 class="svc-name">Odontopediatria</h3>
                 <p class="svc-desc">Cuidado especializado para bebês e crianças. Ambiente acolhedor e abordagem gentil para criar relação positiva com o dentista desde cedo.</p>
+                <a class="svc-cta" href="https://wa.me/5531983140497?text=Quero+agendar+consulta+odontopediátrica+para+meu+filho" target="_blank" rel="noopener">Agendar consulta infantil →</a>
+                <br><a class="svc-cta-shopify" href="https://odontolar-plus.myshopify.com/products/consulta-dental" target="_blank" rel="noopener">🛒 Comprar Consulta</a>
             </article>
         </div>
     </div>
@@ -869,8 +926,8 @@
     <div class="section-inner">
         <div class="section-center fade">
             <span class="section-label">Dúvidas frequentes</span>
-            <h2 class="section-title">Perguntas frequentes.</h2>
-            <p class="section-desc" style="margin:0 auto;">Respostas rápidas sobre agendamento, convênios, tratamentos e mais. Não achou? Fale direto no WhatsApp.</p>
+            <h2 class="section-title">Perguntas frequentes sobre implante dentário, alinhadores, convênios e agendamento em BH.</h2>
+            <p class="section-desc" style="margin:0 auto;">Respostas sobre agendamento, convênios, implantodontia, ortodontia, estética dental, periodontia, endodontia e odontopediatria. Não achou? Fale direto no WhatsApp.</p>
         </div>
         <div class="faq-list fade fd1">
 
@@ -880,227 +937,273 @@
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">A Odontolar Plus fica na <strong>Av. Barão Homem de Melo, 1916 – Jardim América, Belo Horizonte – MG</strong>. Atendemos BH e também Contagem e Nova Lima.<br><br>Se você me disser de qual bairro/cidade você vem, passamos a melhor referência de acesso e sugerimos horários. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">A Odontolar Plus fica na <strong>Av. Barão Homem de Melo, 1916 – Jardim América, Belo Horizonte – MG</strong>. Atendemos BH e também Contagem e Nova Lima.<br>
+                    <em class="faq-cta-prompt">"Se você me disser de qual bairro/cidade você vem, eu te passo a melhor referência de acesso e já sugiro horários."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">2) Como faço para agendar uma avaliação?</span>
+                    <span class="faq-q">2) Como faço para agendar uma avaliação odontológica em BH?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Você pode agendar pelo WhatsApp. Envie seu nome, objetivo (ou dor/queixa) e melhor horário. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Agendar agora →</a></p>
+                    <p class="faq-a">Você pode agendar pelo WhatsApp. Envie seu nome, objetivo (ou dor/queixa) e melhor horário.<br>
+                    <em class="faq-cta-prompt">"Me diga seu melhor dia/horário e se é primeira consulta, que eu já vejo um encaixe."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Agendar agora →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">3) Quais especialidades vocês realizam?</span>
+                    <span class="faq-q">3) Quais especialidades odontológicas vocês realizam?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Implantodontia, estética, alinhadores, periodontia, endodontia (canal) e prevenção. Me diga qual é seu objetivo que direcionamos para a avaliação certa. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Implantodontia, estética dental, alinhadores invisíveis, periodontia, endodontia (canal) e prevenção.<br>
+                    <em class="faq-cta-prompt">"Me diga qual é seu objetivo que eu te direciono para a avaliação certa."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">4) Vocês fazem avaliação e plano de tratamento?</span>
+                    <span class="faq-q">4) Vocês fazem avaliação e plano de tratamento odontológico?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Sim. Após avaliação (e exames quando necessários), apresentamos um plano com etapas e opções. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Sim. Após avaliação (e exames quando necessários), apresentamos um plano com etapas e opções.<br>
+                    <em class="faq-cta-prompt">"Me conte o que te incomoda e se tem exames recentes que eu te explico como funciona."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">5) O orçamento é explicado antes de iniciar?</span>
+                    <span class="faq-q">5) O orçamento é explicado antes de iniciar o tratamento?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Sim. O orçamento é apresentado antes do início, com explicação e alternativas quando existirem. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Sim. O orçamento é apresentado antes do início, com explicação e alternativas quando existirem.<br>
+                    <em class="faq-cta-prompt">"Me diga qual procedimento você busca que eu te explico como funciona a avaliação e o orçamento."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">6) Vocês atendem convênios (Porto Seguro, Amil, SulAmérica)?</span>
+                    <span class="faq-q">6) Vocês atendem convênios odontológicos — Porto Seguro, Amil, SulAmérica, Odontoprev?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Sim. A cobertura varia por plano e procedimento — confirmamos no agendamento. Me diga convênio, nome do plano e o procedimento para confirmarmos a cobertura. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Sim. A cobertura varia por plano e procedimento — confirmamos no agendamento.<br>
+                    <em class="faq-cta-prompt">"Me diga convênio, nome do plano e o procedimento que você precisa que eu confirmo a cobertura."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Confirmar convênio →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">7) Quais documentos preciso levar para atendimento por convênio?</span>
+                    <span class="faq-q">7) Quais documentos preciso levar para atendimento por convênio dental?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Documento com foto e carteirinha/identificação do convênio. Se houver guia/autorização, orientamos. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Documento com foto e carteirinha/identificação do convênio. Se houver guia/autorização, orientamos.<br>
+                    <em class="faq-cta-prompt">"Me diga qual convênio você usa que eu te falo exatamente o que levar e se precisa de guia."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">8) Implante dói? Como é o pós-operatório?</span>
+                    <span class="faq-q">8) Implante dentário dói? Como é o pós-operatório de implante?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">É feito com anestesia e planejamento. No pós, pode haver desconforto controlável com medicação e orientações. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">É feito com anestesia e planejamento cirúrgico. No pós, pode haver desconforto controlável com medicação e orientações.<br>
+                    <em class="faq-cta-prompt">"Me diga qual região e se você tem exames recentes que eu te explico o passo a passo."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Tirar dúvidas sobre implante →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">9) Quanto tempo leva um tratamento com implantes?</span>
+                    <span class="faq-q">9) Quanto tempo leva um tratamento com implantes dentários?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Depende do caso. Após avaliação e exames, informamos o cronograma estimado. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Depende do caso. Após avaliação e exames, informamos o cronograma estimado.<br>
+                    <em class="faq-cta-prompt">"Me diga se já usa prótese e há quanto tempo perdeu o dente que eu te explico o que influencia no prazo."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">10) Vocês fazem enxerto ósseo?</span>
+                    <span class="faq-q">10) Vocês fazem enxerto ósseo para implante?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Quando indicado, sim. A necessidade é definida por avaliação e exames. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Quando indicado, sim. A necessidade é definida por avaliação e exames de imagem.<br>
+                    <em class="faq-cta-prompt">"Se você já tem tomografia, me diga a região e eu te explico como avaliamos."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">11) O que é estética do sorriso?</span>
+                    <span class="faq-q">11) O que é estética do sorriso — clareamento, facetas, lentes de contato dental?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Conjunto de tratamentos para melhorar harmonia e aparência do sorriso — clareamento, facetas, lentes de contato dental e mais. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Conjunto de tratamentos para melhorar harmonia e aparência do sorriso — clareamento dental, facetas de porcelana e lentes de contato dental.<br>
+                    <em class="faq-cta-prompt">"Me diga o que você quer melhorar (cor, formato, espaços, alinhamento) que eu te explico as opções."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Ver opções de estética →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">12) Alinhadores: para quem é indicado?</span>
+                    <span class="faq-q">12) Alinhadores invisíveis: para quem é indicado? Serve para adultos?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Para muitos casos, com indicação definida por avaliação e planejamento digital. Adequado para adultos e adolescentes. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Para muitos casos, com indicação definida por avaliação e planejamento digital. Indicado para adultos e adolescentes.<br>
+                    <em class="faq-cta-prompt">"Me diga sua idade e o que mais te incomoda que eu te explico como funciona."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Avaliar alinhadores →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">13) Quanto tempo dura o tratamento com alinhadores?</span>
+                    <span class="faq-q">13) Quanto tempo dura o tratamento com alinhadores invisíveis?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Varia conforme o caso e a colaboração no uso. Me diga se já usou aparelho antes e qual sua meta que explicamos o que influencia no tempo. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Varia conforme o caso e a colaboração no uso (mínimo 22h/dia).<br>
+                    <em class="faq-cta-prompt">"Me diga se já usou aparelho antes e qual sua meta que eu te explico o que influencia no tempo."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">14) O que é periodontia? Quando devo procurar?</span>
+                    <span class="faq-q">14) O que é periodontia? Quando devo procurar um periodontista em BH?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Cuida da gengiva e suporte dos dentes. Procure se houver sangramento, mau hálito persistente, retração, mobilidade ou sensibilidade. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Periodontia cuida da gengiva e do suporte dos dentes. Procure se houver sangramento gengival, mau hálito persistente, retração, mobilidade ou sensibilidade.<br>
+                    <em class="faq-cta-prompt">"Me diga se sangra e há quanto tempo que eu te oriento sobre a prioridade."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">15) Dor significa que sempre precisa de canal?</span>
+                    <span class="faq-q">15) Dor de dente significa que sempre precisa de canal — endodontia?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Nem sempre. A necessidade é confirmada por avaliação e exames. Me diga há quantos dias dói e se piora no frio/quente ou ao mastigar. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Nem sempre. A necessidade de tratamento de canal (endodontia) é confirmada por avaliação clínica e exames.<br>
+                    <em class="faq-cta-prompt">"Me diga há quantos dias dói e se piora no frio/quente ou ao mastigar que eu te ajudo a entender a urgência."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Avaliar urgência →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">16) Vocês atendem urgência?</span>
+                    <span class="faq-q">16) Vocês atendem urgência odontológica — dor forte, inchaço, trauma dental?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Conforme disponibilidade. Em caso de dor intensa, chame no WhatsApp para priorização. Me diga seu nível de dor (0 a 10) e se tem inchaço. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Urgência — WhatsApp →</a></p>
+                    <p class="faq-a">Conforme disponibilidade. Em caso de dor intensa, trauma ou inchaço, chame no WhatsApp para priorização imediata.<br>
+                    <em class="faq-cta-prompt">"Me diga seu nível de dor (0 a 10) e se tem inchaço que eu tento te encaixar."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">🚨 Urgência — WhatsApp →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">17) Vocês fazem limpeza e check-up?</span>
+                    <span class="faq-q">17) Vocês fazem profilaxia — limpeza dental e check-up odontológico?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Sim, conforme indicação clínica. Me diga quando foi sua última limpeza e se usa aparelho/implante que indicamos o intervalo e agendamos. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Sim, profilaxia (limpeza profissional) e check-up, conforme indicação clínica.<br>
+                    <em class="faq-cta-prompt">"Me diga quando foi sua última limpeza e se usa aparelho/implante que eu te indico o intervalo e agendo."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Agendar limpeza →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">18) Com que frequência devo fazer check-up?</span>
+                    <span class="faq-q">18) Com que frequência devo fazer check-up e limpeza dental?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Depende do seu risco e histórico. Em geral, a cada 6 meses para pacientes com boa saúde bucal. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Depende do seu risco e histórico. Em geral, a cada 6 meses — mas pode variar se houver implantes, aparelho ou histórico de cáries.<br>
+                    <em class="faq-cta-prompt">"Me diga se tem sangramento gengival, cáries frequentes ou implantes que eu te oriento sobre o intervalo."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">19) Quais exames vocês podem solicitar?</span>
+                    <span class="faq-q">19) Quais exames vocês podem solicitar — radiografia, tomografia dental?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Quando necessário, solicitamos exames complementares (radiografia, tomografia) para diagnóstico e planejamento. Se você já tem exames, nos diga de quando são. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Quando necessário, solicitamos exames complementares — radiografia periapical, panorâmica e tomografia cone beam — para diagnóstico e planejamento.<br>
+                    <em class="faq-cta-prompt">"Se você já tem radiografia/tomografia, me diga de quando é que eu te falo se vale trazer."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">20) Vocês atendem crianças?</span>
+                    <span class="faq-q">20) Vocês atendem crianças — odontopediatria em BH?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Atendemos conforme a necessidade e o tipo de procedimento. Nossa odontopediatria tem ambiente acolhedor para crianças desde bebês. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Atendemos conforme a necessidade e o tipo de procedimento. Nossa odontopediatria tem ambiente acolhedor para bebês e crianças.<br>
+                    <em class="faq-cta-prompt">"Me diga a idade e o motivo da consulta que eu confirmo o melhor tipo de atendimento."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Agendar consulta infantil →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">21) Quais formas de pagamento vocês aceitam?</span>
+                    <span class="faq-q">21) Quais formas de pagamento vocês aceitam — Pix, parcelado, convênio?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Pix, cartão de crédito parcelado e débito. Convênios aceitos: Odontoprev, Rede Una, SulAmérica, Porto Seguro, Amil e Bradesco. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">As opções podem variar por tratamento. Trabalhamos com Pix, cartão parcelado e convênios.<br>
+                    <em class="faq-cta-prompt">"Me diga qual tratamento você está planejando que eu te explico as opções disponíveis."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Consultar pagamento →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">22) Posso fazer avaliação sem convênio?</span>
+                    <span class="faq-q">22) Posso fazer avaliação particular — sem convênio dental?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Sim, particular. Você recebe plano e orçamento completo antes de iniciar qualquer tratamento. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Sim, particular. Você recebe plano de tratamento e orçamento detalhado antes de iniciar qualquer procedimento.<br>
+                    <em class="faq-cta-prompt">"Me diga se sua preferência é particular ou convênio que eu já te passo o melhor caminho para agendar."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
                 </div></div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-btn" aria-expanded="false">
-                    <span class="faq-q">23) Como funciona a privacidade dos meus dados e imagens?</span>
+                    <span class="faq-q">23) Como funciona a privacidade dos meus dados e imagens odontológicas — LGPD?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-body"><div class="faq-body-inner">
-                    <p class="faq-a">Seguimos a LGPD (Lei 13.709/2018) e boas práticas de confidencialidade e uso clínico. Qualquer uso além do atendimento deve ser autorizado por você. <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
+                    <p class="faq-a">Seguimos a LGPD (Lei 13.709/2018) e boas práticas de confidencialidade e uso clínico. Qualquer uso além do atendimento deve ser autorizado por você.<br>
+                    <em class="faq-cta-prompt">"Me diga que tipo de registro te preocupa (foto, raio-x, documentação) que eu explico como é feito e como você autoriza."</em>
+                    <a href="https://wa.me/553130282538" target="_blank" rel="noopener">Falar no WhatsApp →</a></p>
                 </div></div>
             </div>
 
@@ -1195,6 +1298,38 @@
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
     }, { threshold: 0.07 });
     document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+    // ── TIME-ON-SECTION TRACKER (alimenta ProteOS) ──
+    const _sections = ['sobre','servicos','tecnologia','aquarios','convenios','faq','blog'];
+    const _times = {}, _starts = {};
+    const _trackObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            const id = e.target.id;
+            if (!id) return;
+            if (e.isIntersecting) { _starts[id] = Date.now(); }
+            else if (_starts[id]) { _times[id] = (_times[id]||0) + Date.now() - _starts[id]; delete _starts[id]; }
+        });
+    }, { threshold: 0.3 });
+    _sections.forEach(id => { const el = document.getElementById(id); if (el) _trackObs.observe(el); });
+
+    // Update URL hash silently (sub-landpage SEO)
+    const _hashObs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting && e.target.id) history.replaceState(null,'','#'+e.target.id); });
+    }, { threshold: 0.55 });
+    _sections.forEach(id => { const el = document.getElementById(id); if (el) _hashObs.observe(el); });
+
+    // Global: ProteOS picks this up when chat opens
+    window.getProteOSContext = () => {
+        Object.keys(_starts).forEach(id => { _times[id] = (_times[id]||0) + Date.now() - _starts[id]; });
+        const sorted = Object.entries(_times).sort((a,b)=>b[1]-a[1]);
+        const labels = {sobre:'clínica/sobre',servicos:'serviços',tecnologia:'tecnologia',aquarios:'AquariOS',convenios:'convênios',faq:'dúvidas/FAQ',blog:'conteúdo/blog'};
+        return {
+            topInterest: sorted[0] ? labels[sorted[0][0]] || sorted[0][0] : null,
+            topInterestMs: sorted[0] ? sorted[0][1] : 0,
+            all: sorted.map(([k,v])=>({ section: labels[k]||k, seconds: Math.round(v/1000) })),
+            pageUrl: location.href
+        };
+    };
 
     // FAQ accordion
     document.querySelectorAll('.faq-btn').forEach(btn => {

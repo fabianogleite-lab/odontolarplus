@@ -482,6 +482,204 @@
         }
         .faq-a a:hover { text-decoration:underline; }
 
+        /* ═══ PROTEОС SIDEBAR ═══ */
+        #proteOS-sidebar {
+            position:fixed; top:0; right:0; height:100vh; z-index:300;
+            display:flex; flex-direction:row; pointer-events:none;
+        }
+
+        /* Tab de abertura */
+        .sidebar-tab {
+            position:absolute; right:0; top:50%;
+            transform:translateY(-50%);
+            width:36px;
+            background:linear-gradient(180deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius:12px 0 0 12px;
+            padding:18px 0;
+            display:flex; flex-direction:column; align-items:center; gap:6px;
+            cursor:pointer; pointer-events:all;
+            transition:width 0.2s, right 0.35s;
+            box-shadow:-4px 0 20px rgba(0,0,0,0.15);
+            border:none;
+        }
+        .sidebar-tab-icon { font-size:1.1rem; }
+        .sidebar-tab-label {
+            font-size:0.6rem; font-weight:800; color:rgba(255,255,255,0.8);
+            letter-spacing:.12em; text-transform:uppercase;
+            writing-mode:vertical-rl; text-orientation:mixed;
+        }
+        #proteOS-sidebar.open .sidebar-tab { right:280px; }
+
+        /* Painel principal */
+        .sidebar-panel {
+            position:absolute; right:0; top:0; height:100%;
+            width:280px;
+            background:rgba(10,18,36,0.97);
+            backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px);
+            border-left:1px solid rgba(255,255,255,0.07);
+            display:flex; flex-direction:column;
+            transform:translateX(100%);
+            transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);
+            pointer-events:none; overflow:hidden;
+        }
+        #proteOS-sidebar.open .sidebar-panel {
+            transform:translateX(0);
+            pointer-events:all;
+        }
+
+        /* Header */
+        .sb-header {
+            display:flex; align-items:center; justify-content:space-between;
+            padding:16px 16px 12px;
+            border-bottom:1px solid rgba(255,255,255,0.06);
+            flex-shrink:0;
+        }
+        .sb-brand {
+            display:flex; align-items:center; gap:8px;
+        }
+        .sb-brand-dot {
+            width:8px; height:8px; border-radius:50%;
+            background:#22c55e; animation:pulse 2s infinite;
+        }
+        .sb-brand-name {
+            font-size:0.85rem; font-weight:800; color:#fff; letter-spacing:-.01em;
+        }
+        .sb-brand-sub { font-size:0.65rem; color:rgba(255,255,255,0.3); }
+        .sb-close {
+            background:rgba(255,255,255,0.07); border:none; cursor:pointer;
+            width:28px; height:28px; border-radius:8px; color:rgba(255,255,255,0.5);
+            font-size:0.85rem; display:flex; align-items:center; justify-content:center;
+            transition:background 0.2s;
+        }
+        .sb-close:hover { background:rgba(255,255,255,0.14); color:#fff; }
+
+        /* Quick links */
+        .sb-links {
+            padding:12px 14px; display:flex; flex-wrap:wrap; gap:6px; flex-shrink:0;
+            border-bottom:1px solid rgba(255,255,255,0.06);
+        }
+        .sb-link {
+            font-size:0.7rem; font-weight:600; color:rgba(255,255,255,0.5);
+            text-decoration:none; padding:4px 10px; border-radius:100px;
+            border:1px solid rgba(255,255,255,0.1);
+            transition:all 0.2s;
+        }
+        .sb-link:hover { color:#fff; border-color:rgba(255,255,255,0.3); background:rgba(255,255,255,0.06); }
+        .sb-link.highlight {
+            background:rgba(10,110,189,0.25); border-color:rgba(10,110,189,0.5);
+            color:var(--primary-light);
+        }
+
+        /* Spotlight serviço */
+        .sb-spotlight {
+            flex-shrink:0; margin:12px; border-radius:14px; overflow:hidden;
+            position:relative; aspect-ratio:16/9; cursor:pointer;
+        }
+        .sb-spotlight-img {
+            width:100%; height:100%; object-fit:cover; display:block;
+            transition:transform 0.6s ease, opacity 0.4s;
+        }
+        .sb-spotlight-img.fading { opacity:0; transform:scale(1.04); }
+        .sb-spotlight-overlay {
+            position:absolute; inset:0;
+            background:linear-gradient(to top, rgba(5,12,28,0.92) 0%, rgba(5,12,28,0.2) 55%, transparent 100%);
+            padding:12px;
+            display:flex; flex-direction:column; justify-content:flex-end;
+        }
+        .sb-spot-badge {
+            font-size:0.55rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
+            color:var(--primary-light); margin-bottom:4px;
+        }
+        .sb-spot-title {
+            font-size:0.9rem; font-weight:800; color:#fff; line-height:1.2; margin-bottom:6px;
+        }
+        .sb-spot-cta {
+            display:inline-flex; align-items:center; gap:5px;
+            font-size:0.7rem; font-weight:700; color:#fff;
+            background:var(--primary); padding:5px 12px; border-radius:100px;
+            text-decoration:none; width:fit-content; transition:opacity 0.2s;
+        }
+        .sb-spot-cta:hover { opacity:0.88; }
+        .sb-spot-dots {
+            display:flex; gap:4px; margin-top:8px;
+        }
+        .sb-spot-dot {
+            width:5px; height:5px; border-radius:50%;
+            background:rgba(255,255,255,0.25); transition:background 0.3s;
+        }
+        .sb-spot-dot.active { background:#fff; width:14px; border-radius:3px; }
+
+        /* Chat ProteOS */
+        .sb-chat {
+            flex:1; display:flex; flex-direction:column; overflow:hidden;
+            border-top:1px solid rgba(255,255,255,0.06);
+        }
+        .sb-chat-hdr {
+            display:flex; align-items:center; gap:8px;
+            padding:10px 14px; flex-shrink:0;
+            background:rgba(124,92,191,0.12);
+            border-bottom:1px solid rgba(124,92,191,0.15);
+        }
+        .sb-chat-avatar {
+            width:32px; height:32px; border-radius:50%;
+            background:linear-gradient(135deg,var(--primary),var(--accent));
+            display:flex; align-items:center; justify-content:center; font-size:.9rem;
+            flex-shrink:0;
+        }
+        .sb-chat-name { font-size:0.78rem; font-weight:700; color:#fff; }
+        .sb-chat-status { font-size:0.62rem; color:#22c55e; font-weight:600; }
+
+        .sb-msgs {
+            flex:1; overflow-y:auto; padding:12px; display:flex; flex-direction:column; gap:8px;
+            scrollbar-width:thin; scrollbar-color:rgba(255,255,255,0.1) transparent;
+        }
+        .sb-msg {
+            max-width:90%; font-size:0.76rem; line-height:1.55; padding:8px 11px;
+            border-radius:12px; animation:msgIn .25s ease;
+        }
+        @keyframes msgIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:none} }
+        .sb-msg.bot {
+            background:rgba(255,255,255,0.07); color:rgba(255,255,255,0.8);
+            border-radius:4px 12px 12px 12px; align-self:flex-start;
+        }
+        .sb-msg.user {
+            background:var(--primary); color:#fff;
+            border-radius:12px 4px 12px 12px; align-self:flex-end;
+        }
+        .sb-msg.typing { background:rgba(255,255,255,0.07); color:rgba(255,255,255,0.4); font-style:italic; }
+        .sb-msg-cta {
+            display:inline-flex; align-items:center; gap:5px; margin-top:6px;
+            background:rgba(10,110,189,0.3); border:1px solid rgba(10,110,189,0.5);
+            color:var(--primary-light); font-size:0.7rem; font-weight:700;
+            padding:5px 10px; border-radius:8px; text-decoration:none; transition:background 0.2s;
+        }
+        .sb-msg-cta:hover { background:rgba(10,110,189,0.5); }
+
+        .sb-input-wrap {
+            display:flex; gap:6px; padding:10px 12px;
+            border-top:1px solid rgba(255,255,255,0.06); flex-shrink:0;
+        }
+        .sb-input {
+            flex:1; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.1);
+            border-radius:10px; color:#fff; font-size:0.76rem; padding:8px 10px;
+            outline:none; transition:border-color 0.2s;
+        }
+        .sb-input::placeholder { color:rgba(255,255,255,0.25); }
+        .sb-input:focus { border-color:rgba(10,110,189,0.6); }
+        .sb-send {
+            width:34px; height:34px; border-radius:10px; flex-shrink:0;
+            background:var(--primary); border:none; color:#fff; cursor:pointer;
+            font-size:1rem; display:flex; align-items:center; justify-content:center;
+            transition:opacity 0.2s;
+        }
+        .sb-send:hover { opacity:0.85; }
+
+        /* Mobile: sidebar como drawer */
+        @media (max-width:768px) {
+            .sidebar-panel { width:100vw; max-width:340px; }
+            #proteOS-sidebar.open .sidebar-tab { right:min(340px, 100vw); }
+        }
+
         /* FLOATING SMART CTA */
         #smart-cta {
             position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(120px);
@@ -966,6 +1164,66 @@
 </section>
 <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 
+<!-- PROTEОС SIDEBAR -->
+<aside id="proteOS-sidebar" aria-label="ProteOS — Assistente Odontolar Plus">
+    <button class="sidebar-tab" id="sidebar-tab" aria-label="Abrir assistente ProteOS">
+        <span class="sidebar-tab-icon">🤖</span>
+        <span class="sidebar-tab-label">ProteOS</span>
+    </button>
+    <div class="sidebar-panel">
+        <!-- Header -->
+        <div class="sb-header">
+            <div class="sb-brand">
+                <div class="sb-brand-dot"></div>
+                <div>
+                    <div class="sb-brand-name">ProteOS</div>
+                    <div class="sb-brand-sub">Assistente Odontolar Plus</div>
+                </div>
+            </div>
+            <button class="sb-close" id="sb-close" aria-label="Fechar">✕</button>
+        </div>
+
+        <!-- Quick links -->
+        <nav class="sb-links" aria-label="Atalhos rápidos">
+            <a class="sb-link highlight" href="https://wa.me/5531983140497?text=Olá,%20quero%20agendar%20uma%20consulta" target="_blank" rel="noopener">📅 Agendar</a>
+            <a class="sb-link" href="#servicos">Serviços</a>
+            <a class="sb-link" href="#convenios">Convênios</a>
+            <a class="sb-link" href="#faq">FAQ</a>
+            <a class="sb-link" href="#aquarios">AquariOS</a>
+            <a class="sb-link" href="https://odontolar-plus.myshopify.com/collections/all" target="_blank" rel="noopener">🛒 Loja</a>
+        </nav>
+
+        <!-- Spotlight de serviço (rotativo) -->
+        <div class="sb-spotlight" id="sb-spotlight">
+            <img class="sb-spotlight-img" id="sb-img" src="images/Dr_Fabiano_e_Dr_Gustavo__100_.avif" alt="Tratamento odontológico Odontolar Plus" loading="lazy">
+            <div class="sb-spotlight-overlay">
+                <div class="sb-spot-badge">Destaque do momento</div>
+                <div class="sb-spot-title" id="sb-spot-title">Alinhadores Invisíveis</div>
+                <a class="sb-spot-cta" id="sb-spot-cta" href="https://wa.me/5531983140497?text=Quero+saber+sobre+alinhadores" target="_blank" rel="noopener">Saiba mais →</a>
+                <div class="sb-spot-dots" id="sb-spot-dots"></div>
+            </div>
+        </div>
+
+        <!-- Chat ProteOS -->
+        <div class="sb-chat">
+            <div class="sb-chat-hdr">
+                <div class="sb-chat-avatar">🤖</div>
+                <div>
+                    <div class="sb-chat-name">ProteOS</div>
+                    <div class="sb-chat-status">● Online agora</div>
+                </div>
+            </div>
+            <div class="sb-msgs" id="sb-msgs">
+                <div class="sb-msg bot">Olá! Sou o ProteOS da Odontolar Plus. Qual tratamento você está buscando?</div>
+            </div>
+            <div class="sb-input-wrap">
+                <input class="sb-input" id="sb-input" type="text" placeholder="Digite sua dúvida..." autocomplete="off" maxlength="200">
+                <button class="sb-send" id="sb-send" aria-label="Enviar">➤</button>
+            </div>
+        </div>
+    </div>
+</aside>
+
 <!-- SMART CTA FLUTUANTE -->
 <div id="smart-cta" role="complementary" aria-label="Assistente Odontolar Plus">
     <div class="scta-avatar">🦷</div>
@@ -1353,6 +1611,131 @@
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
     }, { threshold: 0.07 });
     document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+    // ══ PROTEОS SIDEBAR ══
+    (function() {
+        const sidebar  = document.getElementById('proteOS-sidebar');
+        const tab      = document.getElementById('sidebar-tab');
+        const closeBtn = document.getElementById('sb-close');
+        const msgs     = document.getElementById('sb-msgs');
+        const input    = document.getElementById('sb-input');
+        const send     = document.getElementById('sb-send');
+
+        // Abrir / fechar
+        function openSB()  { sidebar.classList.add('open'); }
+        function closeSB() { sidebar.classList.remove('open'); }
+        tab.addEventListener('click', () => sidebar.classList.contains('open') ? closeSB() : openSB());
+        closeBtn.addEventListener('click', closeSB);
+
+        // ── SPOTLIGHT ROTATIVO ──
+        const SERVICES = [
+            { title:'Alinhadores Invisíveis',  img:'images/Dr_Fabiano_e_Dr_Gustavo__42_.avif',  wa:'Quero+saber+sobre+alinhadores+invisíveis' },
+            { title:'Implantes Dentários',      img:'images/Dr_Fabiano_e_Dr_Gustavo__86_.avif',  wa:'Tenho+interesse+em+implante+dentário' },
+            { title:'Estética Dental',          img:'images/Dr_Fabiano_e_Dr_Gustavo__100_.avif', wa:'Quero+saber+sobre+estética+dental' },
+            { title:'Profilaxia e Check-up',    img:'images/Dr_Fabiano_e_Dr_Gustavo__120_.avif', wa:'Quero+agendar+limpeza+e+check-up' },
+            { title:'Odontopediatria',          img:'images/Dr_Fabiano_e_Dr_Gustavo__38_.avif',  wa:'Consulta+odontopediátrica+para+meu+filho' },
+            { title:'Próteses Dentárias',       img:'images/Dr_Fabiano_e_Dr_Gustavo__110_.avif', wa:'Informações+sobre+prótese+dentária' },
+            { title:'Periodontia',              img:'images/Dr_Fabiano_e_Dr_Gustavo__96_.avif',  wa:'Quero+saber+sobre+tratamento+de+gengiva' },
+            { title:'Endodontia — Canal',       img:'images/Dr_Fabiano_e_Dr_Gustavo__76_.avif',  wa:'Preciso+de+informação+sobre+canal' },
+            { title:'Cirurgia Oral',            img:'images/Dr_Fabiano_e_Dr_Gustavo__65_.avif',  wa:'Tenho+interesse+em+cirurgia+oral' },
+            { title:'Sedação Consciente',       img:'images/Dr_Fabiano_e_Dr_Gustavo__52_.avif',  wa:'Quero+saber+sobre+sedação+consciente' },
+        ];
+
+        const spotImg   = document.getElementById('sb-img');
+        const spotTitle = document.getElementById('sb-spot-title');
+        const spotCta   = document.getElementById('sb-spot-cta');
+        const dotsWrap  = document.getElementById('sb-spot-dots');
+
+        // Embaralha e cria dots
+        let order = [...Array(SERVICES.length).keys()].sort(() => Math.random() - 0.5);
+        let spotIdx = 0;
+
+        dotsWrap.innerHTML = SERVICES.map((_,i) =>
+            `<div class="sb-spot-dot${i===0?' active':''}"></div>`
+        ).join('');
+        const dots = dotsWrap.querySelectorAll('.sb-spot-dot');
+
+        function setSpot(i) {
+            const s = SERVICES[order[i % order.length]];
+            spotImg.classList.add('fading');
+            setTimeout(() => {
+                spotImg.src = s.img;
+                spotImg.alt = s.title + ' — Odontolar Plus BH';
+                spotTitle.textContent = s.title;
+                spotCta.href = 'https://wa.me/5531983140497?text=' + s.wa;
+                spotImg.classList.remove('fading');
+            }, 350);
+            dots.forEach((d,j) => d.classList.toggle('active', j === i % SERVICES.length));
+        }
+
+        setSpot(0);
+        const spotTimer = setInterval(() => { spotIdx++; setSpot(spotIdx); }, 5000);
+        document.getElementById('sb-spotlight').addEventListener('click', () => { clearInterval(spotTimer); });
+
+        // ── CHAT PROTEОС ──
+        const QUICK_REPLIES = {
+            alinhador: { r:'Ótimo! Alinhadores são indicados para correções leves a moderadas. Me diga sua idade e o que mais te incomoda para eu orientar melhor.', wa:'Tenho+interesse+em+alinhadores+invisíveis' },
+            implante:  { r:'Implantes têm alta taxa de sucesso. Para definir se você é candidato, precisamos de uma avaliação com exame de imagem. Quer agendar?', wa:'Interesse+em+implante+dentário' },
+            dor:       { r:'Entendo a urgência. Me diga: a dor é constante ou piora no frio/quente? Isso me ajuda a orientar a prioridade.', wa:'Dor+de+dente+-+urgência' },
+            convênio:  { r:'Atendemos Odontoprev, Rede Una, SulAmérica, Porto Seguro, Amil e Bradesco. Qual é o seu convênio?', wa:'Confirmar+meu+convênio' },
+            preço:     { r:'Os valores variam por tratamento. Posso te explicar as opções de parcelamento e convênios. Qual procedimento você está considerando?', wa:'Informações+sobre+preço' },
+            limpeza:   { r:'A limpeza profissional (profilaxia) é recomendada a cada 6 meses. Quer agendar?', wa:'Agendar+limpeza+dental' },
+            criança:   { r:'Atendemos crianças de todas as idades com ambiente acolhedor. Qual a idade do seu filho?', wa:'Consulta+odontopediátrica' },
+        };
+
+        function addMsg(text, type, ctaLink) {
+            const d = document.createElement('div');
+            d.className = 'sb-msg ' + type;
+            d.textContent = text;
+            if (ctaLink) {
+                const a = document.createElement('a');
+                a.className = 'sb-msg-cta'; a.href = ctaLink; a.target = '_blank'; a.rel = 'noopener';
+                a.textContent = '💬 Continuar no WhatsApp →';
+                d.appendChild(document.createElement('br'));
+                d.appendChild(a);
+            }
+            msgs.appendChild(d);
+            msgs.scrollTop = msgs.scrollHeight;
+            return d;
+        }
+
+        function botRespond(userText) {
+            const t = userText.toLowerCase();
+            const typing = addMsg('ProteOS está digitando...', 'typing');
+            let reply = QUICK_REPLIES.preço;
+            if (/alinha|aparelho|invisali|invisi/i.test(t))   reply = QUICK_REPLIES.alinhador;
+            else if (/implant|dente perdido|ausente/i.test(t)) reply = QUICK_REPLIES.implante;
+            else if (/dor|canal|urgênc|dói|machuc/i.test(t))  reply = QUICK_REPLIES.dor;
+            else if (/convên|plano|porto|amil|sul|odonto/i.test(t)) reply = QUICK_REPLIES.convênio;
+            else if (/preço|valor|cust|quanto|parcel/i.test(t)) reply = QUICK_REPLIES.preço;
+            else if (/limpeza|profilax|check/i.test(t))        reply = QUICK_REPLIES.limpeza;
+            else if (/criança|filho|bebê|infantil|crianca/i.test(t)) reply = QUICK_REPLIES.criança;
+            else {
+                // contexto do visitor
+                const ctx = window.getProteOSContext ? window.getProteOSContext() : null;
+                const top = ctx?.topInterest;
+                if (top && top !== 'hero') reply = { r: `Vi que você passou um tempo na seção de ${top}. Posso aprofundar sobre esse assunto?`, wa: 'Tenho+interesse+em+saber+mais' };
+            }
+            setTimeout(() => {
+                typing.remove();
+                addMsg(reply.r, 'bot', 'https://wa.me/5531983140497?text=' + reply.wa);
+            }, 1200 + Math.random() * 600);
+        }
+
+        function sendMsg() {
+            const v = input.value.trim();
+            if (!v) return;
+            addMsg(v, 'user');
+            input.value = '';
+            botRespond(v);
+        }
+
+        send.addEventListener('click', sendMsg);
+        input.addEventListener('keydown', e => { if (e.key === 'Enter') sendMsg(); });
+
+        // Abre sidebar automaticamente após 90s se não abriu ainda
+        setTimeout(() => { if (!sidebar.classList.contains('open')) openSB(); }, 90000);
+    })();
 
     // ── SMART CTA — trigger contextual por seção e tempo ──
     const CTX = {

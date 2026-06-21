@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot
+Crawl-delay: 0
+
+Sitemap: https://odontolarplus.com.br/sitemap.xml
